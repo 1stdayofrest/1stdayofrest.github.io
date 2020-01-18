@@ -1,85 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="余生的第一天">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="余生的第一天">
@@ -87,39 +54,17 @@
 <meta property="article:author" content="太阳战士">
 <meta name="twitter:card" content="summary">
 
+<link rel="canonical" href="http://yoursite.com/page/2/">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/page/2/"/>
-
-
-
-
 
   <title>余生的第一天</title>
   
@@ -129,165 +74,135 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+</head>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+    <div>
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">余生的第一天</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/mysql-2/" itemprop="url">mysql-2</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/mysql-2/" class="post-title-link" itemprop="url">mysql-2</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -295,12 +210,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
+          <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
 有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##简介：</p>
 <pre><code>设计：
 1.常见业务处理
@@ -312,7 +222,7 @@
 <pre><code>1.sql如何使用索引
 2.链接查询的执行顺序
 3.查询扫描数据行数</code></pre><p><strong>执行计划内容</strong></p>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql1.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql1.png" alt="整体流程"></p>
 <pre><code>ID列：数据为一组数字表示执行select语句的顺序 
      id值相同的时候执行顺数由上至下
      id值越大优先级越高，越先被执行
@@ -467,25 +377,25 @@ TYPE列
   PRIMARY KEY (`id`),
   KEY `联合索引` (`userId`,`mobile`,`month`)
 ) ENGINE=InnoDB AUTO_INCREMENT=71185 DEFAULT CHARSET=utf8 COMMENT=&apos;测试&apos;</code></pre><p>  建立联合索引的列userId,mobile,month 三个建立联合索引</p>
-<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos;</code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql2.png" class="lazyload"></a></p>
+<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos;</code></pre><p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql2.png" alt="整体流程"></p>
 <pre><code>有索引可用
 
-EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  mobile=&apos;166011&apos; ; </code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql3.png" class="lazyload"></a></p>
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  mobile=&apos;166011&apos; ; </code></pre><p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql3.png" alt="整体流程"></p>
 <pre><code>无索引可用
 
-EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; or mobile=&apos;166011&apos; ; </code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql4.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql4.png" class="lazyload"></a></p>
-<pre><code>无索引可用</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql5.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql5.png" class="lazyload"></a></p>
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; or mobile=&apos;166011&apos; ; </code></pre><p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql4.png" alt="整体流程"></p>
+<pre><code>无索引可用</code></pre><p> <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql5.png" alt="整体流程"></p>
 <pre><code>有索引可用 当然这才是正确的用法！！！</code></pre><hr>
 <p> <strong>创建三个单列的索引</strong></p>
 <pre><code> CREATE INDEX useridsingle  ON miaosha_mysql_test(userid);
  CREATE INDEX mobilesingle  ON miaosha_mysql_test(mobile);
  CREATE INDEX monthsingle  ON miaosha_mysql_test(month);
 
-EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos; and month=1;</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql7.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql7.png" class="lazyload"></a></p>
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos; and month=1;</code></pre><p> <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql7.png" alt="整体流程"></p>
 <pre><code>只是用了useridsingle 有索引可用 
 
-EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; AND month=&apos;2018-04&apos;</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql8.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql8.png" class="lazyload"></a></p>
-<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; OR mobile=&apos;13281899972&apos; </code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql9.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql9.png" class="lazyload"></a></p>
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; AND month=&apos;2018-04&apos;</code></pre><p> <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql8.png" alt="整体流程"></p>
+<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; OR mobile=&apos;13281899972&apos; </code></pre><p> <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql9.png" alt="整体流程"></p>
 <pre><code>有索引可用 都用上了</code></pre><p><strong>多个单列索引在多条件查询时只会生效第一个索引！所以多条件联合查询时最好建联合索引！</strong></p>
 <p><strong>最左前缀原则：</strong></p>
 <pre><code>|_在创建联合索引时，要根据业务需求，where子句中使用最频繁的一列放在最左边。这样的话扩展性较好
@@ -504,112 +414,62 @@ EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; 
  4、联合索引比对每个列分别建索引更有优势，因为索引建立得越多就越占磁盘空间，
  在更新数据的时候速度会更慢。另外建立多列索引时，顺序也是需要注意的，
  应该将严格的索引放在前面，这样筛选的力度会更大，效率更高。</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/mysql-3/" itemprop="url">mysql-3</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/mysql-3/" class="post-title-link" itemprop="url">mysql-3</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -617,122 +477,67 @@ EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; 
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="数据库备份和恢复-数据库架构变迁"><a href="#数据库备份和恢复-数据库架构变迁" class="headerlink" title="数据库备份和恢复 + 数据库架构变迁"></a>数据库备份和恢复 + 数据库架构变迁</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/MySQLGood.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/MySQLGood.png" class="lazyload"></a></p>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/sql.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/sql.jpg" class="lazyload"></a></p>
+          <h3 id="数据库备份和恢复-数据库架构变迁"><a href="#数据库备份和恢复-数据库架构变迁" class="headerlink" title="数据库备份和恢复 + 数据库架构变迁"></a>数据库备份和恢复 + 数据库架构变迁</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/MySQLGood.png" alt="整体流程"></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/sql.jpg" alt="整体流程"></p>
 <p><strong>详情请下载</strong></p>
 <p><a href="/docs/MySQL性能优化.xmind">xmind总结</a>  |</p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-master-slave/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/mysql-master-slave/" itemprop="url">mysql-master-slave</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/mysql-master-slave/" class="post-title-link" itemprop="url">mysql-master-slave</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -740,12 +545,7 @@ EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; 
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="分库分表及mycat的整理实操-未整理马上更新"><a href="#分库分表及mycat的整理实操-未整理马上更新" class="headerlink" title="分库分表及mycat的整理实操(未整理马上更新)"></a>分库分表及mycat的整理实操(未整理马上更新)</h3><pre><code>本文章安排目标：
+          <h3 id="分库分表及mycat的整理实操-未整理马上更新"><a href="#分库分表及mycat的整理实操-未整理马上更新" class="headerlink" title="分库分表及mycat的整理实操(未整理马上更新)"></a>分库分表及mycat的整理实操(未整理马上更新)</h3><pre><code>本文章安排目标：
 1. 对于存储层的压力知道如何去提供解决方案和思路
 2. 对分库分表的常用手段有全面了解
 3. 了解Mysql的主从及binlog
@@ -891,112 +691,62 @@ mk-heartbeat
 
 5. Mysql的主从配置
 6. 了解binlog及主从复制原理  </code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/mysql/" itemprop="url">mysql</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/mysql/" class="post-title-link" itemprop="url">mysql</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1004,12 +754,7 @@ mk-heartbeat
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
+          <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
 有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##简介：</p>
 <pre><code>设计：
 1.数据库开发规范的制定
@@ -1211,112 +956,62 @@ mk-heartbeat
     2.避免延迟，修改时锁表
    5.禁止super权限滥用
    6.数据账号连接最小</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/netty/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/netty/" itemprop="url">netty</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/netty/" class="post-title-link" itemprop="url">netty</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1324,12 +1019,7 @@ mk-heartbeat
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="Netty-教程"><a href="#Netty-教程" class="headerlink" title="Netty 教程"></a>Netty 教程</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>####了解NIO和IO</p>
+          <h3 id="Netty-教程"><a href="#Netty-教程" class="headerlink" title="Netty 教程"></a>Netty 教程</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>####了解NIO和IO</p>
 <table>
 <thead>
 <tr>
@@ -1363,9 +1053,9 @@ Java NIO的缓存导向方法略有不同。数据先被读入缓存区然后再
 Java NIO的非阻塞模式，使一个线程从某通道发送请求读取数据，但是它仅能得到目前可用的数据，如果目前没有数据可用时，就什么都不会获取，而不是保持线程阻塞，所以直至数据变的可以读取之前，该线程可以继续做其他的事情。 非阻塞写也是如此。
 一个线程请求写入一些数据到某通道，但不需要等待它完全写入，这个线程同时可以去做别的事情。 线程通常将非阻塞IO的空闲时间用于在其它通道上执行IO操作，所以一个单独的线程现在可以管理多个输入和输出通道（channel）。</code></pre><p>######选择器<br>    Java NIO的选择器允许单个线程监视多个通道的输入。您可以使用选择器注册多个通道，然后使用单个线程“选择”具有可用于处理的输入的通道，或选择准备好进行写入的通道。这种选择器机制使单线程更容易管理多个通道。</p>
 <p>####IO编程<br>我们简化下场景：客户端每隔两秒发送一个带有时间戳的”hello world”给服务端，服务端收到之后打印。<br>为了方便演示，下面例子中，服务端和客户端各一个类，把这两个类拷贝到你的IDE中，先后运行 IOServer.java 和IOClient.java可看到效果。<br>下面是传统的IO编程中服务端实现</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        ServerSocket serverSocket = <span class="keyword">new</span> ServerSocket(<span class="number">8000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// (1) 接收新连接线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="comment">// (1) 阻塞方法获取新的连接</span></span><br><span class="line">                    Socket socket = serverSocket.accept();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// (2) 每一个新的连接都创建一个线程，负责读取数据</span></span><br><span class="line">                    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">byte</span>[] data = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">                            InputStream inputStream = socket.getInputStream();</span><br><span class="line">                            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                                <span class="keyword">int</span> len;</span><br><span class="line">                                <span class="comment">// (3) 按字节流方式读取数据</span></span><br><span class="line">                                <span class="keyword">while</span> ((len = inputStream.read(data)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                                    System.out.println(<span class="keyword">new</span> String(data, <span class="number">0</span>, len));</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;).start();</span><br><span class="line"></span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//server端首先创建了一个serverSocket来监听8000端口。</span></span><br><span class="line"><span class="comment">//然后创建一个线程，线程里面不断调用阻塞方法 serversocket.accept();获取新的连接，见(1)，当获取到新的连接之后，给每条连接创建一个新的线程，这个线程负责从该连接中读取数据，见(2)，然后读取数据是以字节流的方式，见(3)。</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        ServerSocket serverSocket = <span class="keyword">new</span> ServerSocket(<span class="number">8000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// (1) 接收新连接线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="comment">// (1) 阻塞方法获取新的连接</span></span><br><span class="line">                    Socket socket = serverSocket.accept();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// (2) 每一个新的连接都创建一个线程，负责读取数据</span></span><br><span class="line">                    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">byte</span>[] data = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">                            InputStream inputStream = socket.getInputStream();</span><br><span class="line">                            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                                <span class="keyword">int</span> len;</span><br><span class="line">                                <span class="comment">// (3) 按字节流方式读取数据</span></span><br><span class="line">                                <span class="keyword">while</span> ((len = inputStream.read(data)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                                    System.out.println(<span class="keyword">new</span> String(data, <span class="number">0</span>, len));</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;).start();</span><br><span class="line"></span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//server端首先创建了一个serverSocket来监听8000端口。</span></span><br><span class="line"><span class="comment">//然后创建一个线程，线程里面不断调用阻塞方法 serversocket.accept();获取新的连接，见(1)，当获取到新的连接之后，给每条连接创建一个新的线程，这个线程负责从该连接中读取数据，见(2)，然后读取数据是以字节流的方式，见(3)。</span></span><br></pre></td></tr></table></figure>
 
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOClient</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Socket socket = <span class="keyword">new</span> Socket(<span class="string">"127.0.0.1"</span>, <span class="number">8000</span>);</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        socket.getOutputStream().write((<span class="keyword">new</span> Date() + <span class="string">": hello world"</span>).getBytes());</span><br><span class="line">                        socket.getOutputStream().flush();</span><br><span class="line">                        Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//客户端的代码相对简单，连接上服务端8000端口之后，每隔2秒，我们向服务端写一个带有时间戳的 "hello world"</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOClient</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Socket socket = <span class="keyword">new</span> Socket(<span class="string">"127.0.0.1"</span>, <span class="number">8000</span>);</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        socket.getOutputStream().write((<span class="keyword">new</span> Date() + <span class="string">": hello world"</span>).getBytes());</span><br><span class="line">                        socket.getOutputStream().flush();</span><br><span class="line">                        Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//客户端的代码相对简单，连接上服务端8000端口之后，每隔2秒，我们向服务端写一个带有时间戳的 "hello world"</span></span><br></pre></td></tr></table></figure>
 <p>上面的demo，从服务端代码中我们可以看到，在传统的IO模型中，每个连接创建成功之后都需要一个线程来维护，每个线程包含一个while死循环，那么1w个连接对应1w个线程，继而1w个while死循环，这就带来如下几个问题：</p>
 <p>线程资源受限：线程是操作系统中非常宝贵的资源，同一时刻有大量的线程处于阻塞状态是非常严重的资源浪费，操作系统耗不起<br>线程切换效率低下：单机cpu核数固定，线程爆炸之后操作系统频繁进行线程切换，应用性能急剧下降。<br>除了以上两个问题，IO编程中，我们看到数据读写是以字节流为单位，效率不高。</p>
 <p>为了解决这三个问题，JDK在1.4之后提出了NIO<br>####NIO编程<br>    关于NIO相关的文章网上也有很多，这里不打算详细深入分析，下面简单描述一下NIO是如何解决以上三个问题的。</p>
@@ -1397,119 +1087,69 @@ Java NIO的非阻塞模式，使一个线程从某通道发送请求读取数据
 <p>等等。</p>
 </blockquote>
 <p>好 让我们动手写一个Netty客户端和服务端吧<br>####Netty客户端</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.netty.buffer.Unpooled;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandlerContext;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.SimpleChannelInboundHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.*;</span><br><span class="line"><span class="keyword">import</span> io.netty.util.AsciiString;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpHandler</span> <span class="keyword">extends</span> <span class="title">SimpleChannelInboundHandler</span>&lt;<span class="title">FullHttpRequest</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> AsciiString contentType = HttpHeaderValues.TEXT_PLAIN;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">channelRead0</span><span class="params">(ChannelHandlerContext ctx, FullHttpRequest msg)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"class:"</span> + msg.getClass().getName());</span><br><span class="line">        DefaultFullHttpResponse response = <span class="keyword">new</span> DefaultFullHttpResponse(HttpVersion.HTTP_1_1,</span><br><span class="line">                HttpResponseStatus.OK,</span><br><span class="line">                Unpooled.wrappedBuffer(<span class="string">"test"</span>.getBytes())); </span><br><span class="line"></span><br><span class="line">        HttpHeaders heads = response.headers();</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_TYPE, contentType + <span class="string">"; charset=UTF-8"</span>);</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_LENGTH, response.content().readableBytes()); <span class="comment">// 3</span></span><br><span class="line">        heads.add(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);</span><br><span class="line"></span><br><span class="line">        ctx.write(response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelReadComplete</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"channelReadComplete"</span>);</span><br><span class="line">        <span class="keyword">super</span>.channelReadComplete(ctx);</span><br><span class="line">        ctx.flush(); <span class="comment">// 4</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exceptionCaught</span><span class="params">(ChannelHandlerContext ctx, Throwable cause)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"exceptionCaught"</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != cause) cause.printStackTrace();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != ctx) ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.netty.buffer.Unpooled;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandlerContext;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.SimpleChannelInboundHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.*;</span><br><span class="line"><span class="keyword">import</span> io.netty.util.AsciiString;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpHandler</span> <span class="keyword">extends</span> <span class="title">SimpleChannelInboundHandler</span>&lt;<span class="title">FullHttpRequest</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> AsciiString contentType = HttpHeaderValues.TEXT_PLAIN;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">channelRead0</span><span class="params">(ChannelHandlerContext ctx, FullHttpRequest msg)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"class:"</span> + msg.getClass().getName());</span><br><span class="line">        DefaultFullHttpResponse response = <span class="keyword">new</span> DefaultFullHttpResponse(HttpVersion.HTTP_1_1,</span><br><span class="line">                HttpResponseStatus.OK,</span><br><span class="line">                Unpooled.wrappedBuffer(<span class="string">"test"</span>.getBytes())); </span><br><span class="line"></span><br><span class="line">        HttpHeaders heads = response.headers();</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_TYPE, contentType + <span class="string">"; charset=UTF-8"</span>);</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_LENGTH, response.content().readableBytes()); <span class="comment">// 3</span></span><br><span class="line">        heads.add(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);</span><br><span class="line"></span><br><span class="line">        ctx.write(response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelReadComplete</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"channelReadComplete"</span>);</span><br><span class="line">        <span class="keyword">super</span>.channelReadComplete(ctx);</span><br><span class="line">        ctx.flush(); <span class="comment">// 4</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exceptionCaught</span><span class="params">(ChannelHandlerContext ctx, Throwable cause)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"exceptionCaught"</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != cause) cause.printStackTrace();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != ctx) ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>####Netty服务端</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"><span class="keyword">import</span> io.netty.bootstrap.ServerBootstrap;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelInitializer;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.nio.NioEventLoopGroup;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.sctp.nio.NioSctpServerChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.SocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.nio.NioServerSocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpObjectAggregator;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpRequestDecoder;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpResponseEncoder;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpServer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span>  <span class="keyword">int</span> port ;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpServer</span><span class="params">(<span class="keyword">int</span> port)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.port = port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ServerBootstrap bootStrap = <span class="keyword">new</span> ServerBootstrap();</span><br><span class="line">        NioEventLoopGroup group = <span class="keyword">new</span> NioEventLoopGroup();</span><br><span class="line">        bootStrap.group(group).channel(NioServerSocketChannel<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">                .<span class="title">childHandler</span>(<span class="title">new</span> <span class="title">ChannelInitializer</span>&lt;<span class="title">SocketChannel</span>&gt;() </span>&#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                        System.out.println(<span class="string">"channel :"</span> +ch);</span><br><span class="line">                        ch.pipeline().addLast(<span class="string">"decoder"</span>, <span class="keyword">new</span> HttpRequestDecoder())</span><br><span class="line">                                .addLast(<span class="string">"encoder"</span>, <span class="keyword">new</span> HttpResponseEncoder())  <span class="comment">// 2</span></span><br><span class="line">                                .addLast(<span class="string">"aggregator"</span>, <span class="keyword">new</span> HttpObjectAggregator(<span class="number">512</span> * <span class="number">1024</span>))    <span class="comment">// 3</span></span><br><span class="line">                                .addLast(<span class="string">"handler"</span>,  <span class="keyword">new</span> HttpHandler());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (args.length != <span class="number">1</span>) &#123;</span><br><span class="line">            System.err.println(</span><br><span class="line">                    <span class="string">"Usage: "</span> + HttpServer<span class="class">.<span class="keyword">class</span>.<span class="title">getSimpleName</span>() +</span></span><br><span class="line">                            " &lt;port&gt;");</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> port = Integer.parseInt(args[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">new</span> HttpServer(port).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//To be continued！</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"><span class="keyword">import</span> io.netty.bootstrap.ServerBootstrap;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelInitializer;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.nio.NioEventLoopGroup;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.sctp.nio.NioSctpServerChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.SocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.nio.NioServerSocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpObjectAggregator;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpRequestDecoder;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpResponseEncoder;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpServer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span>  <span class="keyword">int</span> port ;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpServer</span><span class="params">(<span class="keyword">int</span> port)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.port = port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ServerBootstrap bootStrap = <span class="keyword">new</span> ServerBootstrap();</span><br><span class="line">        NioEventLoopGroup group = <span class="keyword">new</span> NioEventLoopGroup();</span><br><span class="line">        bootStrap.group(group).channel(NioServerSocketChannel<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">                .<span class="title">childHandler</span>(<span class="title">new</span> <span class="title">ChannelInitializer</span>&lt;<span class="title">SocketChannel</span>&gt;() </span>&#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                        System.out.println(<span class="string">"channel :"</span> +ch);</span><br><span class="line">                        ch.pipeline().addLast(<span class="string">"decoder"</span>, <span class="keyword">new</span> HttpRequestDecoder())</span><br><span class="line">                                .addLast(<span class="string">"encoder"</span>, <span class="keyword">new</span> HttpResponseEncoder())  <span class="comment">// 2</span></span><br><span class="line">                                .addLast(<span class="string">"aggregator"</span>, <span class="keyword">new</span> HttpObjectAggregator(<span class="number">512</span> * <span class="number">1024</span>))    <span class="comment">// 3</span></span><br><span class="line">                                .addLast(<span class="string">"handler"</span>,  <span class="keyword">new</span> HttpHandler());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (args.length != <span class="number">1</span>) &#123;</span><br><span class="line">            System.err.println(</span><br><span class="line">                    <span class="string">"Usage: "</span> + HttpServer<span class="class">.<span class="keyword">class</span>.<span class="title">getSimpleName</span>() +</span></span><br><span class="line">                            " &lt;port&gt;");</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> port = Integer.parseInt(args[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">new</span> HttpServer(port).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//To be continued！</span></span><br></pre></td></tr></table></figure>
 <p>####参考文档<br><a href="https://www.jianshu.com/p/a4e03835921a" target="_blank" rel="noopener">Netty是什么?</a></p>
 <p>To be continued!!!!</p>
 <p>To be continued!!!!</p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/ngnix-good/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/ngnix-good/" itemprop="url">ngnix-good</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/ngnix-good/" class="post-title-link" itemprop="url">ngnix-good</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1517,12 +1157,7 @@ Java NIO的非阻塞模式，使一个线程从某通道发送请求读取数据
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="秒杀nginx优化"><a href="#秒杀nginx优化" class="headerlink" title="秒杀nginx优化"></a>秒杀nginx优化</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
+          <h3 id="秒杀nginx优化"><a href="#秒杀nginx优化" class="headerlink" title="秒杀nginx优化"></a>秒杀nginx优化</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
 <blockquote>
 <p>目标</p>
 </blockquote>
@@ -1731,112 +1366,62 @@ http {
         }
     }
 }</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/redis-good/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/redis-good/" itemprop="url">redis-good</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/redis-good/" class="post-title-link" itemprop="url">redis-good</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1844,12 +1429,7 @@ http {
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="redis-使用与进阶"><a href="#redis-使用与进阶" class="headerlink" title="redis 使用与进阶"></a>redis 使用与进阶</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="redis-使用与进阶"><a href="#redis-使用与进阶" class="headerlink" title="redis 使用与进阶"></a>redis 使用与进阶</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）</p>
 </blockquote>
 <pre><code>1.redis分布式锁,zk分布式锁,lua脚本限流,lua分布式锁
@@ -1914,16 +1494,16 @@ delete from lock where methodName=’’; </code></pre><p>  <strong>（数据库
 3.实行业务代码
 
 4.流程完成后,删除对应的子节点并释放锁  （Watch机制）
-对应分布式开源包Curator</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" class="lazyload"></a></p>
+对应分布式开源包Curator</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" alt="整体流程"></p>
 <p>   <strong>Redis分布式锁方案</strong></p>
 <pre><code>Redis 中有许多的命令都可以实现分布式锁,但是比较常用的是SETNX这个命令来实现
 有多种方案代码：
-1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" class="lazyload"></a></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" class="lazyload"></a></p>
+1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" alt="整体流程"></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" alt="整体流程"></p>
 <pre><code>closeOrder也有 不过是另一种！比较复杂！！
 加入时间对比如果当前时间已经大与释放锁的时间
 说明已经可以释放这个锁重新在获取锁,setget方法可以把之前的锁去掉在重新获取,旧值在于之前的
-值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" class="lazyload"></a></p>
+值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" alt="整体流程"></p>
 <pre><code>redis有成熟的框架redission</code></pre><p>   <strong>Redis多路复用机制（看不看都行）</strong></p>
 <pre><code>linux的内核会把所有外部设备都看作一个文件来操作,对一个文件的读写操作会调用内核提供的系统命令,
 返回一个 file descriptor（文件描述符）。对于一个socket的读写也会有响应的描述符,称为socketfd(socket 描述符)。
@@ -1966,119 +1546,69 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 如果当前执行的lua脚本对redis的数据进行了修改,比如（set）操作,那么script kill命令没办法终止脚本的运行,
 因为要保证lua脚本的原子性。如果执行一部分终止了,就违背了这一个原则
 在这种情况下,只能通过 shutdown nosave命令强行终止</code></pre><p>   <strong>Redis（2.6以后）–lua分布式锁</strong></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" alt="整体流程"></p>
 <p>   <strong>如何利用lua + redis  取代 nigix + lua 脚本进行分布式限流</strong></p>
 <p>   分布式限流的关键就是把限流做成具有原子性的功能，可以使用redis + lua 来进行技术实现，高并发和高性能，实现时间窗口内的流量控制<br>   操作在lua脚本中又因为redis是单线程的，因此线程安全！Redis 将整个脚本作为一个原子执行, 无需担心并发, 也就无需事务;</p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" class="lazyload"></a></p>
-<p>  <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" alt="整体流程"></p>
+<p>  <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" alt="整体流程"></p>
 <p>   lua脚本一致存在于redis 中可以 限制每秒钟的请求数实现限流！</p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/redis-lua/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/redis-lua/" itemprop="url">redis-lua</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/redis-lua/" class="post-title-link" itemprop="url">redis-lua</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2086,121 +1616,66 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="lua学习"><a href="#lua学习" class="headerlink" title="lua学习"></a>lua学习</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="lua学习"><a href="#lua学习" class="headerlink" title="lua学习"></a>lua学习</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>数据类型</p>
 </blockquote>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/tomcat-good/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/tomcat-good/" itemprop="url">tomcat-good</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/tomcat-good/" class="post-title-link" itemprop="url">tomcat-good</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2208,12 +1683,7 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>xiu修改### 秒杀tomcat优化 </p>
+          <p>xiu修改### 秒杀tomcat优化 </p>
 <pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
 <blockquote>
 <p>本文以tomcat8.5.20为准<br>目标</p>
@@ -2300,112 +1770,62 @@ connectionTimeout=&quot;20000&quot;
 redirectPort=&quot;8443&quot; /&gt;
 
 &lt;Listener className=&quot;org.apache.catalina.core.AprLifecycleListener&quot; SSLEngine=&quot;off&quot; /&gt;</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/code-criterion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/code-criterion/" itemprop="url">code-criterion</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/code-criterion/" class="post-title-link" itemprop="url">code-criterion</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2413,12 +1833,7 @@ redirectPort=&quot;8443&quot; /&gt;
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><pre><code>老司机一般的规范大家都知道类似驼峰,匹配一类的大家都知道具体则不再提
+          <h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><pre><code>老司机一般的规范大家都知道类似驼峰,匹配一类的大家都知道具体则不再提
 有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：<br>1.lombook– idea插件请大家下载 ,去除setget构造方法等,阿里巴巴代码规范插件请自行下载<br><br>2.<strong>尽量将长的类名，方法名，变量名精简</strong><br></p>
 <pre><code>1.长的类名会使开发者不易生命该类型的变量
 2.长的方法命名会使它变得晦涩难懂
@@ -2491,45 +1906,25 @@ if (isChecking) {
     result.withError(ResultMsgStatus.SYSTEM_CHECKING.getMessage());
 }
 return result;</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
+  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2537,107 +1932,101 @@ return result;</code></pre>
           </div>
           
 
-
-          
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">太阳战士</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">太阳战士</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
 
-          <nav class="site-state motion-element">
 
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
 
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">太阳战士</span>
-
-  
 </div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
 
         
 
@@ -2647,118 +2036,25 @@ return result;</code></pre>
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2776,22 +2072,8 @@ return result;</code></pre>
 
 
 
-  
 
 
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 

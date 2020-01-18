@@ -1,85 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="redis 使用与进阶有问题或者宝贵意见联系我的QQ,非常希望你的加入！ 目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）  1.redis分布式锁,zk分布式锁,lua脚本限流,lua分布式锁 2.redis持久化策略 3.redis集群 4.redis的简单操练 整理大部分常用的场景与使用,如果有疑问或者你不懂的地方请联系我！1 redis分布式锁 1.分布式系统">
+  <meta name="description" content="redis 使用与进阶有问题或者宝贵意见联系我的QQ,非常希望你的加入！ 目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）  1.redis分布式锁,zk分布式锁,lua脚本限流,lua分布式锁 2.redis持久化策略 3.redis集群 4.redis的简单操练 整理大部分常用的场景与使用,如果有疑问或者你不懂的地方请联系我！1 redis分布式锁 1.分布式系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis-good">
 <meta property="og:url" content="http://yoursite.com/2020/01/17/redis-good/index.html">
@@ -99,39 +66,17 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png">
 
+<link rel="canonical" href="http://yoursite.com/2020/01/17/redis-good/">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2020/01/17/redis-good/"/>
-
-
-
-
 
   <title>redis-good | 余生的第一天</title>
   
@@ -141,170 +86,139 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+</head>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+    <div>
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">余生的第一天</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/redis-good/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">redis-good</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          redis-good
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h3 id="redis-使用与进阶"><a href="#redis-使用与进阶" class="headerlink" title="redis 使用与进阶"></a>redis 使用与进阶</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
@@ -372,16 +286,16 @@ delete from lock where methodName=’’; </code></pre><p>  <strong>（数据库
 3.实行业务代码
 
 4.流程完成后,删除对应的子节点并释放锁  （Watch机制）
-对应分布式开源包Curator</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" class="lazyload"></a></p>
+对应分布式开源包Curator</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" alt="整体流程"></p>
 <p>   <strong>Redis分布式锁方案</strong></p>
 <pre><code>Redis 中有许多的命令都可以实现分布式锁,但是比较常用的是SETNX这个命令来实现
 有多种方案代码：
-1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" class="lazyload"></a></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" class="lazyload"></a></p>
+1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" alt="整体流程"></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" alt="整体流程"></p>
 <pre><code>closeOrder也有 不过是另一种！比较复杂！！
 加入时间对比如果当前时间已经大与释放锁的时间
 说明已经可以释放这个锁重新在获取锁,setget方法可以把之前的锁去掉在重新获取,旧值在于之前的
-值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" class="lazyload"></a></p>
+值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" alt="整体流程"></p>
 <pre><code>redis有成熟的框架redission</code></pre><p>   <strong>Redis多路复用机制（看不看都行）</strong></p>
 <pre><code>linux的内核会把所有外部设备都看作一个文件来操作,对一个文件的读写操作会调用内核提供的系统命令,
 返回一个 file descriptor（文件描述符）。对于一个socket的读写也会有响应的描述符,称为socketfd(socket 描述符)。
@@ -424,204 +338,144 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 如果当前执行的lua脚本对redis的数据进行了修改,比如（set）操作,那么script kill命令没办法终止脚本的运行,
 因为要保证lua脚本的原子性。如果执行一部分终止了,就违背了这一个原则
 在这种情况下,只能通过 shutdown nosave命令强行终止</code></pre><p>   <strong>Redis（2.6以后）–lua分布式锁</strong></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" alt="整体流程"></p>
 <p>   <strong>如何利用lua + redis  取代 nigix + lua 脚本进行分布式限流</strong></p>
 <p>   分布式限流的关键就是把限流做成具有原子性的功能，可以使用redis + lua 来进行技术实现，高并发和高性能，实现时间窗口内的流量控制<br>   操作在lua脚本中又因为redis是单线程的，因此线程安全！Redis 将整个脚本作为一个原子执行, 无需担心并发, 也就无需事务;</p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" class="lazyload"></a></p>
-<p>  <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" alt="整体流程"></p>
+<p>  <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" alt="整体流程"></p>
 <p>   lua脚本一致存在于redis 中可以 限制每秒钟的请求数实现限流！</p>
 
-      
     </div>
-    
-    
-    
 
     
-
+    
     
 
-    
+      <footer class="post-footer">
 
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/01/17/redis-lua/" rel="next" title="redis-lua">
-                <i class="fa fa-chevron-left"></i> redis-lua
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/17/ngnix-good/" rel="prev" title="ngnix-good">
-                ngnix-good <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/17/redis-lua/" rel="prev" title="redis-lua">
+      <i class="fa fa-chevron-left"></i> redis-lua
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/17/ngnix-good/" rel="next" title="ngnix-good">
+      ngnix-good <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">太阳战士</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#redis-使用与进阶"><span class="nav-number">1.</span> <span class="nav-text">redis 使用与进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-redis分布式锁"><span class="nav-number">1.1.</span> <span class="nav-text">1 redis分布式锁</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#redis-使用与进阶"><span class="nav-number">1.</span> <span class="nav-text">redis 使用与进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-redis分布式锁"><span class="nav-number">1.1.</span> <span class="nav-text">1 redis分布式锁</span></a></li></ol></li></ol></div>
+      </div>
       <!--/noindex-->
-      
 
-      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">太阳战士</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">太阳战士</span>
-
-  
 </div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
 
         
 
@@ -631,122 +485,25 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -764,22 +521,8 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 
 
 
-  
 
 
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 

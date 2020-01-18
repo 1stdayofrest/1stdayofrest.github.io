@@ -1,85 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="余生的第一天">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="余生的第一天">
@@ -87,39 +54,17 @@
 <meta property="article:author" content="太阳战士">
 <meta name="twitter:card" content="summary">
 
+<link rel="canonical" href="http://yoursite.com/">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
 
   <title>余生的第一天</title>
   
@@ -129,165 +74,135 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+</head>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+    <div>
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">余生的第一天</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/code-rpc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/code-rpc/" itemprop="url">code-rpc</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/code-rpc/" class="post-title-link" itemprop="url">code-rpc</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:44" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -295,12 +210,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="分布式事务的讲解与实现"><a href="#分布式事务的讲解与实现" class="headerlink" title="分布式事务的讲解与实现"></a>分布式事务的讲解与实现</h3><pre><code>基础的ACID等等就不一一介绍了
+          <h3 id="分布式事务的讲解与实现"><a href="#分布式事务的讲解与实现" class="headerlink" title="分布式事务的讲解与实现"></a>分布式事务的讲解与实现</h3><pre><code>基础的ACID等等就不一一介绍了
 有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##简介：</p>
 <pre><code>基础的ACID等等就不一一介绍了，柔性事务一类的大家在网上一搜都是，可以先看看基础的！
 我的github都是实际操作加讲解，我觉得写文章大篇大论浪费时间，不如实际操作来的深刻
@@ -311,9 +221,9 @@
 3.分布式事务的实操与演进</code></pre><ol start="2">
 <li><p><strong>TCC事务的简介</strong></p>
 <p>  两段式事务</p>
-<p>  <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/liangduanshi.JPG" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/liangduanshi.JPG" class="lazyload"></a></p>
+<p>  <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/liangduanshi.JPG" alt="整体流程"></p>
 <p>  三段式事务</p>
-<p>  <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.JPG" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.JPG" class="lazyload"></a></p>
+<p>  <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.JPG" alt="整体流程"></p>
 </li>
 </ol>
 <pre><code>TCC的优点：
@@ -323,10 +233,10 @@
 
 组合支付，账务一类的 比较要求强一致性高的场景使用
 
-Tcc项目地址:</code></pre><p>   <a href="https://github.com/changmingxie/tcc-transaction/tree/master-1.2.x" target="_blank" rel="noopener"><img alt="地址" data-src="tcc%E5%9C%B0%E5%9D%80" class="lazyload"></a></p>
-<pre><code>如果你想 用dubbo的他的还不行有点错误请下载： (使用请先参考TCC文档)</code></pre><p>   <a href="https://github.com/qiurunze123/tcc-dubbo" target="_blank" rel="noopener"><img alt="地址" data-src="tcc-dubbo%E5%9C%B0%E5%9D%80" class="lazyload"></a></p>
+Tcc项目地址:</code></pre><p>   <a href="https://github.com/changmingxie/tcc-transaction/tree/master-1.2.x" target="_blank" rel="noopener"><img src="tcc%E5%9C%B0%E5%9D%80" alt="地址"></a></p>
+<pre><code>如果你想 用dubbo的他的还不行有点错误请下载： (使用请先参考TCC文档)</code></pre><p>   <a href="https://github.com/qiurunze123/tcc-dubbo" target="_blank" rel="noopener"><img src="tcc-dubbo%E5%9C%B0%E5%9D%80" alt="地址"></a></p>
 <p>   效果图：</p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption="效果图" class="fancybox"><img alt="效果图" title="效果图" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.gif" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/tcc.gif" alt="效果图"></p>
 <pre><code>|_tcc-transaction-dubbo|
                        |_1 字节码代理 -&gt; 创建接口的代理对象
                        |_2 DubboTransactionContextEditor -&gt; TRANSACTION_CONTEXT[标识事务状态]利用Dubbo的隐式参数来传递关键的非业务数据
@@ -365,112 +275,62 @@ Tcc项目地址:</code></pre><p>   <a href="https://github.com/changmingxie/tcc-
                  |_组织事务参与者
                  |_执行目标try方法
                  |_执行confirm和cancel方法</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/code-solve/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/code-solve/" itemprop="url">code-solve</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/code-solve/" class="post-title-link" itemprop="url">code-solve</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:44" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -478,51 +338,46 @@ Tcc项目地址:</code></pre><p>   <a href="https://github.com/changmingxie/tcc-
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="秒杀常见问题"><a href="#秒杀常见问题" class="headerlink" title="秒杀常见问题"></a>秒杀常见问题</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="秒杀常见问题"><a href="#秒杀常见问题" class="headerlink" title="秒杀常见问题"></a>秒杀常见问题</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>秒杀注意事项以及整体简略设计</p>
 </blockquote>
-<h4 id="1-如何解决卖超问题"><a href="#1-如何解决卖超问题" class="headerlink" title="1.如何解决卖超问题"></a><a href>1.如何解决卖超问题</a></h4><pre><code>--在sql加上判断防止数据边为负数 
+<h4 id="1-如何解决卖超问题"><a href="#1-如何解决卖超问题" class="headerlink" title="1.如何解决卖超问题"></a><a href="">1.如何解决卖超问题</a></h4><pre><code>--在sql加上判断防止数据边为负数 
 --数据库加唯一索引防止用户重复购买
---redis预减库存减少数据库访问　内存标记减少redis访问　请求先入队列缓冲，异步下单，增强用户体验</code></pre><h4 id="注册功能-–-如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈"><a href="#注册功能-–-如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈" class="headerlink" title="注册功能 – 如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈"></a><a href>注册功能 – 如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈</a></h4><h4 id="全局异常处理拦截"><a href="#全局异常处理拦截" class="headerlink" title="全局异常处理拦截"></a><a href>全局异常处理拦截</a></h4><pre><code>1.定义全局的异常拦截器
+--redis预减库存减少数据库访问　内存标记减少redis访问　请求先入队列缓冲，异步下单，增强用户体验</code></pre><h4 id="注册功能-–-如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈"><a href="#注册功能-–-如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈" class="headerlink" title="注册功能 – 如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈"></a><a href="">注册功能 – 如果有前端的牛人加入修改几个页面那是再好不过了哈哈哈</a></h4><h4 id="全局异常处理拦截"><a href="#全局异常处理拦截" class="headerlink" title="全局异常处理拦截"></a><a href="">全局异常处理拦截</a></h4><pre><code>1.定义全局的异常拦截器
 2.定义了全局异常类型
 3.只返回和业务有关的
-4.详情请看GlobleException</code></pre><h4 id="页面级缓存thymeleafViewResolver"><a href="#页面级缓存thymeleafViewResolver" class="headerlink" title="页面级缓存thymeleafViewResolver"></a><a href>页面级缓存thymeleafViewResolver</a></h4><pre><code>1.详细请看basecontroller 缓存渲染页面</code></pre><h4 id="对象级缓存redis🙋🐓"><a href="#对象级缓存redis🙋🐓" class="headerlink" title="对象级缓存redis🙋🐓"></a><a href>对象级缓存redis🙋🐓</a></h4><pre><code>redis永久缓存对象减少压力
+4.详情请看GlobleException</code></pre><h4 id="页面级缓存thymeleafViewResolver"><a href="#页面级缓存thymeleafViewResolver" class="headerlink" title="页面级缓存thymeleafViewResolver"></a><a href="">页面级缓存thymeleafViewResolver</a></h4><pre><code>1.详细请看basecontroller 缓存渲染页面</code></pre><h4 id="对象级缓存redis🙋🐓"><a href="#对象级缓存redis🙋🐓" class="headerlink" title="对象级缓存redis🙋🐓"></a><a href="">对象级缓存redis🙋🐓</a></h4><pre><code>redis永久缓存对象减少压力
 redis预减库存减少数据库访
-内存标记方法减少redis访问</code></pre><h4 id="订单处理队列rabbitmq"><a href="#订单处理队列rabbitmq" class="headerlink" title="订单处理队列rabbitmq"></a><a href>订单处理队列rabbitmq</a></h4><pre><code>请求先入队缓冲，异步下单，增强用户体验
+内存标记方法减少redis访问</code></pre><h4 id="订单处理队列rabbitmq"><a href="#订单处理队列rabbitmq" class="headerlink" title="订单处理队列rabbitmq"></a><a href="">订单处理队列rabbitmq</a></h4><pre><code>请求先入队缓冲，异步下单，增强用户体验
 请求出队，生成订单，减少库存
-客户端定时轮询检查是否秒杀成功 </code></pre><h4 id="解决分布式session"><a href="#解决分布式session" class="headerlink" title="解决分布式session"></a><a href>解决分布式session</a></h4><pre><code>--生成随机的uuid作为cookie返回并redis内存写入 
+客户端定时轮询检查是否秒杀成功 </code></pre><h4 id="解决分布式session"><a href="#解决分布式session" class="headerlink" title="解决分布式session"></a><a href="">解决分布式session</a></h4><pre><code>--生成随机的uuid作为cookie返回并redis内存写入 
 --拦截器每次拦截方法，来重新获根据cookie获取对象
 --下一个页面拿到key重新获取对象
 --HandlerMethodArgumentResolver 方法 supportsParameter 如果为true 执行 resolveArgument 方法获取miaoshauser对象
 --如果有缓存的话 这个功能实现起来就和简单，在一个用户访问接口的时候我们把访问次数写到缓存中，在加上一个有效期。
-   通过拦截器. 做一个注解 @AccessLimit 然后封装这个注解，可以有效的设置每次访问多少次，有效时间是否需要登录！</code></pre><h4 id="秒杀安全-–-安全性设计"><a href="#秒杀安全-–-安全性设计" class="headerlink" title="秒杀安全 – 安全性设计"></a><a href>秒杀安全 – 安全性设计</a></h4><pre><code>秒杀接口隐藏
+   通过拦截器. 做一个注解 @AccessLimit 然后封装这个注解，可以有效的设置每次访问多少次，有效时间是否需要登录！</code></pre><h4 id="秒杀安全-–-安全性设计"><a href="#秒杀安全-–-安全性设计" class="headerlink" title="秒杀安全 – 安全性设计"></a><a href="">秒杀安全 – 安全性设计</a></h4><pre><code>秒杀接口隐藏
 数字公式验证码
-接口防刷限流(通用 注解，拦截器方式)</code></pre><h4 id="通用缓存key的封装采用什么设计模式"><a href="#通用缓存key的封装采用什么设计模式" class="headerlink" title="通用缓存key的封装采用什么设计模式"></a><a href>通用缓存key的封装采用什么设计模式</a></h4><pre><code>模板模式的优点
+接口防刷限流(通用 注解，拦截器方式)</code></pre><h4 id="通用缓存key的封装采用什么设计模式"><a href="#通用缓存key的封装采用什么设计模式" class="headerlink" title="通用缓存key的封装采用什么设计模式"></a><a href="">通用缓存key的封装采用什么设计模式</a></h4><pre><code>模板模式的优点
 -具体细节步骤实现定义在子类中，子类定义详细处理算法是不会改变算法整体结构
 -代码复用的基本技术，在数据库设计中尤为重要
 -存在一种反向的控制结构，通过一个父类调用其子类的操作，通过子类对父类进行扩展增加新的行为，符合“开闭原则”
--缺点：　每个不同的实现都需要定义一个子类，会导致类的个数增加，系统更加庞大</code></pre><h4 id="redis的库存如何与数据库的库存保持一致"><a href="#redis的库存如何与数据库的库存保持一致" class="headerlink" title="redis的库存如何与数据库的库存保持一致"></a><a href>redis的库存如何与数据库的库存保持一致</a></h4><pre><code>redis的数量不是库存,他的作用仅仅只是为了阻挡多余的请求透穿到DB，起到一个保护的作用
+-缺点：　每个不同的实现都需要定义一个子类，会导致类的个数增加，系统更加庞大</code></pre><h4 id="redis的库存如何与数据库的库存保持一致"><a href="#redis的库存如何与数据库的库存保持一致" class="headerlink" title="redis的库存如何与数据库的库存保持一致"></a><a href="">redis的库存如何与数据库的库存保持一致</a></h4><pre><code>redis的数量不是库存,他的作用仅仅只是为了阻挡多余的请求透穿到DB，起到一个保护的作用
 因为秒杀的商品有限，比如10个，让1万个请求区访问DB是没有意义的，因为最多也就只能10个
-请求下单成功，所有这个是一个伪命题，我们是不需要保持一致的</code></pre><h4 id="redis-预减成功，DB扣减库存失败怎么办"><a href="#redis-预减成功，DB扣减库存失败怎么办" class="headerlink" title="redis 预减成功，DB扣减库存失败怎么办"></a><a href>redis 预减成功，DB扣减库存失败怎么办</a></h4><pre><code>-其实我们可以不用太在意，对用户而言，秒杀不中是正常现象，秒杀中才是意外，单个用户秒杀中
+请求下单成功，所有这个是一个伪命题，我们是不需要保持一致的</code></pre><h4 id="redis-预减成功，DB扣减库存失败怎么办"><a href="#redis-预减成功，DB扣减库存失败怎么办" class="headerlink" title="redis 预减成功，DB扣减库存失败怎么办"></a><a href="">redis 预减成功，DB扣减库存失败怎么办</a></h4><pre><code>-其实我们可以不用太在意，对用户而言，秒杀不中是正常现象，秒杀中才是意外，单个用户秒杀中
 -1.本来就是小概率事件，出现这种情况对于用户而言没有任何影响
 -2.对于商户而言，本来就是为了活动拉流量人气的，卖不完还可以省一部分费用，但是活动还参与了，也就没有了任何影响
--3.对网站而言，最重要的是体验，只要网站不崩溃，对用户而言没有任何影响</code></pre><h4 id="为什么redis数量会减少为负数"><a href="#为什么redis数量会减少为负数" class="headerlink" title="为什么redis数量会减少为负数"></a><a href>为什么redis数量会减少为负数</a></h4><pre><code>//预见库存
+-3.对网站而言，最重要的是体验，只要网站不崩溃，对用户而言没有任何影响</code></pre><h4 id="为什么redis数量会减少为负数"><a href="#为什么redis数量会减少为负数" class="headerlink" title="为什么redis数量会减少为负数"></a><a href="">为什么redis数量会减少为负数</a></h4><pre><code>//预见库存
 long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock,&quot;&quot;+goodsId) ;
 if(stock &lt;0){
 localOverMap.put(goodsId, true);
 return Result.error(CodeMsg.MIAO_SHA_OVER);
 }
 假如redis的数量为1,这个时候同时过来100个请求，大家一起执行decr数量就会减少成-99这个是正常的
-进行优化后改变了sql写法和内存写法则不会出现上述问题</code></pre><h4 id="为什么要单独维护一个秒杀结束标志"><a href="#为什么要单独维护一个秒杀结束标志" class="headerlink" title="为什么要单独维护一个秒杀结束标志"></a><a href>为什么要单独维护一个秒杀结束标志</a></h4><pre><code>-1.前提所有的秒杀相关的接口都要加上活动是否结束的标志，如果结束就直接返回，包括轮寻的接口防止一直轮寻
--2.管理后台也可以手动的更改这个标志，防止出现活动开始以后就没办法结束这种意外的事件</code></pre><h4 id="rabbitmq如何做到消息不重复不丢失即使服务器重启"><a href="#rabbitmq如何做到消息不重复不丢失即使服务器重启" class="headerlink" title="rabbitmq如何做到消息不重复不丢失即使服务器重启"></a><a href>rabbitmq如何做到消息不重复不丢失即使服务器重启</a></h4><pre><code>-1.exchange持久化
+进行优化后改变了sql写法和内存写法则不会出现上述问题</code></pre><h4 id="为什么要单独维护一个秒杀结束标志"><a href="#为什么要单独维护一个秒杀结束标志" class="headerlink" title="为什么要单独维护一个秒杀结束标志"></a><a href="">为什么要单独维护一个秒杀结束标志</a></h4><pre><code>-1.前提所有的秒杀相关的接口都要加上活动是否结束的标志，如果结束就直接返回，包括轮寻的接口防止一直轮寻
+-2.管理后台也可以手动的更改这个标志，防止出现活动开始以后就没办法结束这种意外的事件</code></pre><h4 id="rabbitmq如何做到消息不重复不丢失即使服务器重启"><a href="#rabbitmq如何做到消息不重复不丢失即使服务器重启" class="headerlink" title="rabbitmq如何做到消息不重复不丢失即使服务器重启"></a><a href="">rabbitmq如何做到消息不重复不丢失即使服务器重启</a></h4><pre><code>-1.exchange持久化
 -2.queue持久化
 -3.发送消息设置MessageDeliveryMode.persisent这个也是默认的行为
--4.手动确认</code></pre><h4 id="为什么threadlocal存储user对象，原理"><a href="#为什么threadlocal存储user对象，原理" class="headerlink" title="为什么threadlocal存储user对象，原理"></a><a href>为什么threadlocal存储user对象，原理</a></h4><pre><code>1.并发编程中重要的问题就是数据共享，当你在一个线程中改变任意属性时，所有的线程都会因此受到影响，同时会看到第一个线程修改后的值&lt;br&gt;
+-4.手动确认</code></pre><h4 id="为什么threadlocal存储user对象，原理"><a href="#为什么threadlocal存储user对象，原理" class="headerlink" title="为什么threadlocal存储user对象，原理"></a><a href="">为什么threadlocal存储user对象，原理</a></h4><pre><code>1.并发编程中重要的问题就是数据共享，当你在一个线程中改变任意属性时，所有的线程都会因此受到影响，同时会看到第一个线程修改后的值&lt;br&gt;
 有时我们希望如此，比如：多个线程增大或减小同一个计数器变量&lt;br&gt;
 但是，有时我们希望确保每个线程，只能工作在它自己 的线程实例的拷贝上，同时不会影响其他线程的数据&lt;br&gt;
 
@@ -543,12 +398,12 @@ return Result.error(CodeMsg.MIAO_SHA_OVER);
  局部线程通常使用在这样的情况下，当你有一些对象并不满足线程安全，但是你想避免在使用synchronized关键字&lt;br&gt;
  块时产生的同步访问，那么，让每个线程拥有它自己的对象实例&lt;br&gt;
  注意：局部变量是同步或局部线程的一个好的替代，它总是能够保证线程安全。唯一可能限制你这样做的是你的应用设计约束&lt;br&gt;
- 所以设计threadlocal存储user不会对对象产生影响，每次进来一个请求都会产生自身的线程变量来存储</code></pre><h4 id="maven-隔离"><a href="#maven-隔离" class="headerlink" title="maven 隔离"></a><a href>maven 隔离</a></h4><pre><code>maven隔离就是在开发中，把各个环境的隔离开来，一般分为 
+ 所以设计threadlocal存储user不会对对象产生影响，每次进来一个请求都会产生自身的线程变量来存储</code></pre><h4 id="maven-隔离"><a href="#maven-隔离" class="headerlink" title="maven 隔离"></a><a href="">maven 隔离</a></h4><pre><code>maven隔离就是在开发中，把各个环境的隔离开来，一般分为 
  本地（local）
  开发(dev)
  测试(test)
  线上(prod)
- 在环境部署中为了防止人工修改的弊端！ spring.profiles.active=@activatedProperties@</code></pre><h4 id="redis-分布式锁实现方法"><a href="#redis-分布式锁实现方法" class="headerlink" title="redis 分布式锁实现方法"></a><a href>redis 分布式锁实现方法</a></h4><pre><code>我用了四种方法 ， 分别指出了不同版本的缺陷以及演进的过程 orderclosetask
+ 在环境部署中为了防止人工修改的弊端！ spring.profiles.active=@activatedProperties@</code></pre><h4 id="redis-分布式锁实现方法"><a href="#redis-分布式锁实现方法" class="headerlink" title="redis 分布式锁实现方法"></a><a href="">redis 分布式锁实现方法</a></h4><pre><code>我用了四种方法 ， 分别指出了不同版本的缺陷以及演进的过程 orderclosetask
 V1----&gt;&gt;版本没有操作，在分布式系统中会造成同一时间，资源浪费而且很容易出现并发问题
 V2---&gt;&gt;版本加了分布式redis锁，在访问核心方法前，加入redis锁可以阻塞其他线程访问,可以
 很好的处理并发问题,但是缺陷就是如果机器突然宕机，或者线路波动等，就会造成死锁，一直
@@ -556,14 +411,14 @@ V2---&gt;&gt;版本加了分布式redis锁，在访问核心方法前，加入re
 V3版本--&gt;&gt;很好的解决了这个问题v2的问题，就是加入时间对比如果当前时间已经大与释放锁的时间
 说明已经可以释放这个锁重新在获取锁，setget方法可以把之前的锁去掉在重新获取,旧值在于之前的
 值比较，如果无变化说明这个期间没有人获取或者操作这个redis锁，则可以重新获取
-V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处理，但是waittime记住要这只为0</code></pre><h4 id="服务降级–服务熔断-过载保护-）"><a href="#服务降级–服务熔断-过载保护-）" class="headerlink" title="服务降级–服务熔断(过载保护)）"></a><a href>服务降级–服务熔断(过载保护)）</a></h4><pre><code>自动降级： 超时.失败次数,故障,限流
+V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处理，但是waittime记住要这只为0</code></pre><h4 id="服务降级–服务熔断-过载保护-）"><a href="#服务降级–服务熔断-过载保护-）" class="headerlink" title="服务降级–服务熔断(过载保护)）"></a><a href="">服务降级–服务熔断(过载保护)）</a></h4><pre><code>自动降级： 超时.失败次数,故障,限流
 人工降级：秒杀，双11
 
 9.所有秒杀相关的接口比如：秒杀，获取秒杀地址，获取秒杀结果，获取秒杀验证码都需要加上
-秒杀是否开始结束的判断</code></pre><h4 id="RPC事务补偿"><a href="#RPC事务补偿" class="headerlink" title="RPC事务补偿"></a><a href>RPC事务补偿</a></h4><pre><code>当集中式进行服务化RPC演进成分布式的时候，事务则成为了进行分布式的一个痛点，本项目的做法为：
+秒杀是否开始结束的判断</code></pre><h4 id="RPC事务补偿"><a href="#RPC事务补偿" class="headerlink" title="RPC事务补偿"></a><a href="">RPC事务补偿</a></h4><pre><code>当集中式进行服务化RPC演进成分布式的时候，事务则成为了进行分布式的一个痛点，本项目的做法为：
 1.进行流程初始化，当分别调用不用服务化接口的时候，成功则进行流程，失败则返回并进行状态更新
 将订单状态变为回滚
-2.使用定时任务不断的进行处理rollback的订单进行回滚</code></pre><h4 id="秒杀类似场景sql的写法注意事项"><a href="#秒杀类似场景sql的写法注意事项" class="headerlink" title="秒杀类似场景sql的写法注意事项"></a><a href>秒杀类似场景sql的写法注意事项</a></h4><pre><code>1.在秒杀一类的场景里面，因为数据量亿万级所有即使有的有缓存有的时候也是扛不住的，不可避免的透穿到DB
+2.使用定时任务不断的进行处理rollback的订单进行回滚</code></pre><h4 id="秒杀类似场景sql的写法注意事项"><a href="#秒杀类似场景sql的写法注意事项" class="headerlink" title="秒杀类似场景sql的写法注意事项"></a><a href="">秒杀类似场景sql的写法注意事项</a></h4><pre><code>1.在秒杀一类的场景里面，因为数据量亿万级所有即使有的有缓存有的时候也是扛不住的，不可避免的透穿到DB
  所有在写一些sql的时候就要注意：
  1.一定要避免全表扫描，如果扫一张大表的数据就会造成慢查询，导致数据的连接池直接塞满,导致事故
  首先考虑在where和order by 设计的列上建立索引
@@ -580,8 +435,8 @@ V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处
        9.应尽量避免在 where 子句中对字段进行表达式操作 where num/2  num=100*2
  2.合理的使用索引  索引并不是越多越好，使用不当会造成性能开销
  3.尽量避免大事务操作，提高系统并发能力
- 4.尽量避免象客户端返回大量数据，如果返回则要考虑是否需求合理，实在不得已则需要在设计一波了！！！！！</code></pre><h4 id="网站访问统计实现"><a href="#网站访问统计实现" class="headerlink" title="网站访问统计实现"></a><a href>网站访问统计实现</a></h4><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/count.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/count.png" class="lazyload"></a></p>
-<pre><code>利用lua脚本进行对redis操作,登陆时，每次登陆成功则记录访问（具体你想在什么时段进行统计自己说了算）</code></pre><h4 id="项目进行dubbo-ZK改造"><a href="#项目进行dubbo-ZK改造" class="headerlink" title="项目进行dubbo+ZK改造"></a><a href>项目进行dubbo+ZK改造</a></h4><pre><code>├── miaosha-admin  登录模块
+ 4.尽量避免象客户端返回大量数据，如果返回则要考虑是否需求合理，实在不得已则需要在设计一波了！！！！！</code></pre><h4 id="网站访问统计实现"><a href="#网站访问统计实现" class="headerlink" title="网站访问统计实现"></a><a href="">网站访问统计实现</a></h4><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/count.png" alt="整体流程"></p>
+<pre><code>利用lua脚本进行对redis操作,登陆时，每次登陆成功则记录访问（具体你想在什么时段进行统计自己说了算）</code></pre><h4 id="项目进行dubbo-ZK改造"><a href="#项目进行dubbo-ZK改造" class="headerlink" title="项目进行dubbo+ZK改造"></a><a href="">项目进行dubbo+ZK改造</a></h4><pre><code>├── miaosha-admin  登录模块
 │   ├── pom.xml
 │   └── miaosha-admin-api
 │   └── miaosha-admin-service
@@ -607,112 +462,62 @@ V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处
      │   └── miaosha-message-common
      │   
      │  </code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/dubbo-admin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/dubbo-admin/" itemprop="url">dubbo-admin</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/dubbo-admin/" class="post-title-link" itemprop="url">dubbo-admin</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:44" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:44+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -720,124 +525,69 @@ V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="dubbo-admin-平台搭建与管理"><a href="#dubbo-admin-平台搭建与管理" class="headerlink" title="dubbo-admin 平台搭建与管理"></a>dubbo-admin 平台搭建与管理</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h4 id="dubbo-admin-2-6-0-war包-请进入-docs-dubbo-admin-下载"><a href="#dubbo-admin-2-6-0-war包-请进入-docs-dubbo-admin-下载" class="headerlink" title="dubbo-admin-2.6.0 war包 请进入/docs/dubbo-admin/下载"></a><a href="/docs/dubbo-admin/dubbo-admin-2.6.0.war">dubbo-admin-2.6.0 war包 请进入/docs/dubbo-admin/下载</a></h4><p>1.可直接 <a href="https://github.com/apache/incubator-dubbo/releases/tag/dubbo-2.6.0" target="_blank" rel="noopener">https://github.com/apache/incubator-dubbo/releases/tag/dubbo-2.6.0</a> 下载后将dubbo-admin-2.6.0达成war包</p>
+          <h3 id="dubbo-admin-平台搭建与管理"><a href="#dubbo-admin-平台搭建与管理" class="headerlink" title="dubbo-admin 平台搭建与管理"></a>dubbo-admin 平台搭建与管理</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h4 id="dubbo-admin-2-6-0-war包-请进入-docs-dubbo-admin-下载"><a href="#dubbo-admin-2-6-0-war包-请进入-docs-dubbo-admin-下载" class="headerlink" title="dubbo-admin-2.6.0 war包 请进入/docs/dubbo-admin/下载"></a><a href="/docs/dubbo-admin/dubbo-admin-2.6.0.war">dubbo-admin-2.6.0 war包 请进入/docs/dubbo-admin/下载</a></h4><p>1.可直接 <a href="https://github.com/apache/incubator-dubbo/releases/tag/dubbo-2.6.0" target="_blank" rel="noopener">https://github.com/apache/incubator-dubbo/releases/tag/dubbo-2.6.0</a> 下载后将dubbo-admin-2.6.0达成war包</p>
 <p>2./docs/dubbo-admin/dubbo-admin-2.6.0.war获取war包 </p>
 <p>3.获取后 将war包放在tomcat的webapp目录 </p>
 <p>4.启动 window startup.bat linux ./bin/startup.sh 启动 – 记得安装zk客户端才可以启动成功</p>
 <p>5.访问 http://端口号:8080/dubbo-admin-2.6.0/  可成功</p>
 <p>6.账号密码 root/root</p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/fenbushi-tcc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/fenbushi-tcc/" itemprop="url">fenbushi-tcc</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/fenbushi-tcc/" class="post-title-link" itemprop="url">fenbushi-tcc</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -845,12 +595,7 @@ V4----&gt;&gt;采用成熟的框架redisson,封装好的方法则可以直接处
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="分布式事物"><a href="#分布式事物" class="headerlink" title="分布式事物"></a>分布式事物</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="分布式事物"><a href="#分布式事物" class="headerlink" title="分布式事物"></a>分布式事物</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）</p>
 </blockquote>
 <pre><code>1.事物简介
@@ -915,16 +660,16 @@ delete from lock where methodName=’’; </code></pre><p>  <strong>（数据库
 3.实行业务代码
 
 4.流程完成后,删除对应的子节点并释放锁  （Watch机制）
-对应分布式开源包Curator</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" class="lazyload"></a></p>
+对应分布式开源包Curator</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" alt="整体流程"></p>
 <p>   <strong>Redis分布式锁方案</strong></p>
 <pre><code>Redis 中有许多的命令都可以实现分布式锁,但是比较常用的是SETNX这个命令来实现
 有多种方案代码：
-1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" class="lazyload"></a></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" class="lazyload"></a></p>
+1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" alt="整体流程"></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" alt="整体流程"></p>
 <pre><code>closeOrder也有 不过是另一种！比较复杂！！
 加入时间对比如果当前时间已经大与释放锁的时间
 说明已经可以释放这个锁重新在获取锁,setget方法可以把之前的锁去掉在重新获取,旧值在于之前的
-值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" class="lazyload"></a></p>
+值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" alt="整体流程"></p>
 <pre><code>redis有成熟的框架redission</code></pre><p>   <strong>Redis多路复用机制（看不看都行）</strong></p>
 <pre><code>linux的内核会把所有外部设备都看作一个文件来操作,对一个文件的读写操作会调用内核提供的系统命令,
 返回一个 file descriptor（文件描述符）。对于一个socket的读写也会有响应的描述符,称为socketfd(socket 描述符)。
@@ -967,114 +712,64 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 如果当前执行的lua脚本对redis的数据进行了修改,比如（set）操作,那么script kill命令没办法终止脚本的运行,
 因为要保证lua脚本的原子性。如果执行一部分终止了,就违背了这一个原则
 在这种情况下,只能通过 shutdown nosave命令强行终止</code></pre><p>   <strong>Redis（2.6以后）–lua分布式锁</strong></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" class="lazyload"></a></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" alt="整体流程"></p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/fenbushi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/fenbushi/" itemprop="url">fenbushi</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/fenbushi/" class="post-title-link" itemprop="url">fenbushi</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1082,146 +777,91 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>分布式系统历程—-1</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi1.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi1.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-2</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi2.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi2.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-3</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi3.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi3.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-4</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi4.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi4.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi4.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-5</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi5.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi5.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi5.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-6</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi6.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi6.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi6.png" alt="整体流程"></p>
 <blockquote>
 <p>分布式系统历程—-7</p>
 </blockquote>
-<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi7.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi7.png" class="lazyload"></a></p>
+<p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/fenbushi7.png" alt="整体流程"></p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/jemter-solve/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/jemter-solve/" itemprop="url">jemter-solve</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/jemter-solve/" class="post-title-link" itemprop="url">jemter-solve</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1229,12 +869,7 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="如何利用jmeter进行压测"><a href="#如何利用jmeter进行压测" class="headerlink" title="如何利用jmeter进行压测"></a>如何利用jmeter进行压测</h3><h3 id="我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了"><a href="#我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了" class="headerlink" title="我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了"></a>我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="如何利用jmeter进行压测"><a href="#如何利用jmeter进行压测" class="headerlink" title="如何利用jmeter进行压测"></a>如何利用jmeter进行压测</h3><h3 id="我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了"><a href="#我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了" class="headerlink" title="我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了"></a>我的服务配置较低大数据量请在自己的服务器上搞下不然就崩了</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）</p>
 </blockquote>
 <pre><code>1.如何对秒杀生成大数据量对应的用户id和token来进行压测
@@ -1245,122 +880,72 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 如果有疑问或者你不懂的地方请联系我！</code></pre><h4 id="1-利用jmeter进行接口压测-（jmeter3-0-jdk1-7-版本以上需1-8-版本在tools里面）"><a href="#1-利用jmeter进行接口压测-（jmeter3-0-jdk1-7-版本以上需1-8-版本在tools里面）" class="headerlink" title="1 利用jmeter进行接口压测 （jmeter3.0 jdk1.7  版本以上需1.8 版本在tools里面）"></a>1 利用jmeter进行接口压测 （jmeter3.0 jdk1.7  版本以上需1.8 版本在tools里面）</h4><p> <strong>秒杀生成大数据量对应的用户id和token</strong></p>
 <pre><code>在后端写模拟前端请求计算出不同的用户对应的token ， 在UserUtil类里面
 
-生成文件格式：</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter4.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter4.png" class="lazyload"></a></p>
-<pre><code>代码类：</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter2.png" class="lazyload"></a></p>
-<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter3.png" class="lazyload"></a></p>
+生成文件格式：</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter4.png" alt="整体流程"></p>
+<pre><code>代码类：</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter2.png" alt="整体流程"></p>
+<p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter3.png" alt="整体流程"></p>
 <pre><code>利用这个类可以生成大数据量的userId和token当前也可以自己改装生成你想要的</code></pre><p> <strong>利用jmeter进行接口压测</strong></p>
-<pre><code>1.点击右键生成线程组一类的 </code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter5.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter5.png" class="lazyload"></a></p>
-<pre><code>2.右键线程组选择配置原件并定义http默认值</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter6.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter6.png" class="lazyload"></a></p>
-<pre><code>3.右键监听器可以生成聚合报告等一类的</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter7.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter7.png" class="lazyload"></a></p>
-<pre><code>4.右键线程组添加sampler 添加请求http请求具体情况更具实际的来</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter9.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter9.png" class="lazyload"></a></p>
-<pre><code>5.右键线程组添加CSV DATA Set Config  设置用户参数和token 把生成的路径引进来</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter8.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter8.png" class="lazyload"></a></p>
+<pre><code>1.点击右键生成线程组一类的 </code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter5.png" alt="整体流程"></p>
+<pre><code>2.右键线程组选择配置原件并定义http默认值</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter6.png" alt="整体流程"></p>
+<pre><code>3.右键监听器可以生成聚合报告等一类的</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter7.png" alt="整体流程"></p>
+<pre><code>4.右键线程组添加sampler 添加请求http请求具体情况更具实际的来</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter9.png" alt="整体流程"></p>
+<pre><code>5.右键线程组添加CSV DATA Set Config  设置用户参数和token 把生成的路径引进来</code></pre><p>   <img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/jmeter8.png" alt="整体流程"></p>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/jvm-goods/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/jvm-goods/" itemprop="url">jvm-goods</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/jvm-goods/" class="post-title-link" itemprop="url">jvm-goods</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1368,12 +953,7 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="生产内存环境"><a href="#生产内存环境" class="headerlink" title="生产内存环境"></a>生产内存环境</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>注重实践,不会长篇大论,纯属浪费大家时间！属于进阶文章,感谢你的支持！
+          <h3 id="生产内存环境"><a href="#生产内存环境" class="headerlink" title="生产内存环境"></a>生产内存环境</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>注重实践,不会长篇大论,纯属浪费大家时间！属于进阶文章,感谢你的支持！
 
 
 解决问题：
@@ -1452,112 +1032,62 @@ eval “while true do end” 0 在第二个窗口中运行get hello
 </tr>
 </tbody></table>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/linux/" itemprop="url">linux</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/linux/" class="post-title-link" itemprop="url">linux</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1565,12 +1095,7 @@ eval “while true do end” 0 在第二个窗口中运行get hello
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="秒杀nginx优化"><a href="#秒杀nginx优化" class="headerlink" title="秒杀nginx优化"></a>秒杀nginx优化</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
+          <h3 id="秒杀nginx优化"><a href="#秒杀nginx优化" class="headerlink" title="秒杀nginx优化"></a>秒杀nginx优化</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
 <blockquote>
 <p>目标</p>
 </blockquote>
@@ -1779,112 +1304,62 @@ http {
         }
     }
 }</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/maven-wrapper/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/maven-wrapper/" itemprop="url">maven-wrapper</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/maven-wrapper/" class="post-title-link" itemprop="url">maven-wrapper</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1892,13 +1367,8 @@ http {
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="maven-wrapper"><a href="#maven-wrapper" class="headerlink" title="maven wrapper"></a>maven wrapper</h3><pre><code>下载项目, 切换的项目根目录
-  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Linux/Mac:</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">cd</span> miaosha/</span><br><span class="line">&gt; ./mvnw clean install</span><br><span class="line"></span><br><span class="line">Windows:</span><br><span class="line">&gt; mvnw.cmd clean install</span><br></pre></td></tr></table></figure></div>
+          <h3 id="maven-wrapper"><a href="#maven-wrapper" class="headerlink" title="maven wrapper"></a>maven wrapper</h3><pre><code>下载项目, 切换的项目根目录
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Linux/Mac:</span><br><span class="line"></span><br><span class="line">&gt; <span class="built_in">cd</span> miaosha/</span><br><span class="line">&gt; ./mvnw clean install</span><br><span class="line"></span><br><span class="line">Windows:</span><br><span class="line">&gt; mvnw.cmd clean install</span><br></pre></td></tr></table></figure>
    运行以上命令相关依赖便会安装完毕
    启动GeekQMainApplication主类即可
   若有对于./mvnw 不了解的请点击下方链接介绍</code></pre><blockquote>
@@ -1939,112 +1409,62 @@ windows:
 <pre><code>因此大家在下载项目代码之后, 只需要执行 ./mvn clean install 
 maven warpper 便会自动为该项目构建maven环境.
 当然如果大家用的IDE是idea 那么依然也可以使用右上方的MavenProject Panel 鼠标触发各个Task</code></pre>
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mybatis-code/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/mybatis-code/" itemprop="url">mybatis-code</a></h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/mybatis-code/" class="post-title-link" itemprop="url">mybatis-code</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:43:43" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-06-12 11:11:38" itemprop="dateModified" datetime="2019-06-12T11:11:38+08:00">2019-06-12</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2052,12 +1472,7 @@ maven warpper 便会自动为该项目构建maven环境.
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h3 id="mybatis使用与总结"><a href="#mybatis使用与总结" class="headerlink" title="mybatis使用与总结"></a>mybatis使用与总结</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+          <h3 id="mybatis使用与总结"><a href="#mybatis使用与总结" class="headerlink" title="mybatis使用与总结"></a>mybatis使用与总结</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
 <p>mybatis 使用总结</p>
 </blockquote>
 <h4 id="resultType-和-resultMap"><a href="#resultType-和-resultMap" class="headerlink" title="resultType 和 resultMap"></a>resultType 和 resultMap</h4><pre><code>MyBatis的每一个查询映射的返回类型都是ResultMap，
@@ -2111,49 +1526,29 @@ foreach</code></pre><h3 id="如何使用mybatis-generator-generate"><a href="#�
                         &lt;version&gt;5.1.21&lt;/version&gt;
                     &lt;/dependency&gt;
                 &lt;/dependencies&gt;
-            &lt;/plugin&gt;</code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="使用" class="fancybox"><img alt="使用" title="使用" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis1.png" class="lazyload"></a><br><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="使用" class="fancybox"><img alt="使用" title="使用" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis2.png" class="lazyload"></a></p>
+            &lt;/plugin&gt;</code></pre><p><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis1.png" alt="使用"><br><img src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mybatis2.png" alt="使用"></p>
 <h3 id="generatorConfig-xml-内容解析"><a href="#generatorConfig-xml-内容解析" class="headerlink" title="generatorConfig.xml 内容解析?"></a>generatorConfig.xml 内容解析?</h3><pre><code>已在其中备注,详细内容请见generatorConfig.xml</code></pre><h3 id="xml映射文件都会有一个dao接口，工作原理？"><a href="#xml映射文件都会有一个dao接口，工作原理？" class="headerlink" title="xml映射文件都会有一个dao接口，工作原理？"></a>xml映射文件都会有一个dao接口，工作原理？</h3><pre><code>Dao接口里的方法，是不能重载的，因为是全限名+方法名的保存和寻找策略。      
 Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态代理为Dao接口生成代理proxy对象，
-代理对象proxy会拦截接口方法，转而执行MappedStatement所代表的sql，然后将sql执行结果返回。</code></pre><h3 id><a href="#" class="headerlink" title></a></h3>
-          
-        
+代理对象proxy会拦截接口方法，转而执行MappedStatement所代表的sql，然后将sql执行结果返回。</code></pre><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
+  </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2161,107 +1556,101 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
           </div>
           
 
-
-          
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">太阳战士</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">太阳战士</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
 
-          <nav class="site-state motion-element">
 
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
 
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">太阳战士</span>
-
-  
 </div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
 
         
 
@@ -2271,118 +1660,25 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2400,22 +1696,8 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
 
 
 
-  
 
 
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 

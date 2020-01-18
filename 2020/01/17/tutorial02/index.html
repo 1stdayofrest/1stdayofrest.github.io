@@ -1,85 +1,52 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="从零开始的 JSON 库教程（二）：解析数字 Milo Yip 2016&#x2F;9&#x2F;18  本文是《从零开始的 JSON 库教程》的第二个单元。本单元的源代码位于 json-tutorial&#x2F;tutorial02。 本单元内容：  初探重构 JSON 数字语法 数字表示方式 单元测试 十进制转换至二进制 总结与练习 参考 常见问题  1. 初探重构在讨论解析数字之前，我们再补充 TDD 中的一个步骤──">
+  <meta name="description" content="从零开始的 JSON 库教程（二）：解析数字 Milo Yip 2016&#x2F;9&#x2F;18  本文是《从零开始的 JSON 库教程》的第二个单元。本单元的源代码位于 json-tutorial&#x2F;tutorial02。 本单元内容：  初探重构 JSON 数字语法 数字表示方式 单元测试 十进制转换至二进制 总结与练习 参考 常见问题  1. 初探重构在讨论解析数字之前，我们再补充 TDD 中的一个步骤──">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tutorial02">
 <meta property="og:url" content="http://yoursite.com/2020/01/17/tutorial02/index.html">
@@ -93,39 +60,17 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/01/17/tutorial02/images/number.png">
 
+<link rel="canonical" href="http://yoursite.com/2020/01/17/tutorial02/">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2020/01/17/tutorial02/"/>
-
-
-
-
 
   <title>tutorial02 | 余生的第一天</title>
   
@@ -135,170 +80,139 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+</head>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+    <div>
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">余生的第一天</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/tutorial02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="太阳战士">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="余生的第一天">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">tutorial02</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          tutorial02
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:35:42+08:00">
-                2020-01-17
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="Created: 2020-01-17 21:35:42" itemprop="dateCreated datePublished" datetime="2020-01-17T21:35:42+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-25 16:02:13" itemprop="dateModified" datetime="2019-10-25T16:02:13+08:00">2019-10-25</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h1 id="从零开始的-JSON-库教程（二）：解析数字"><a href="#从零开始的-JSON-库教程（二）：解析数字" class="headerlink" title="从零开始的 JSON 库教程（二）：解析数字"></a>从零开始的 JSON 库教程（二）：解析数字</h1><ul>
@@ -324,46 +238,46 @@
 <p>在 TDD 的过程中，我们的目标是编写代码去通过测试。但由于这个目标的引导性太强，我们可能会忽略正确性以外的软件品质。在通过测试之后，代码的正确性得以保证，我们就应该审视现时的代码，看看有没有地方可以改进，而同时能维持测试顺利通过。我们可以安心地做各种修改，因为我们有单元测试，可以判断代码在修改后是否影响原来的行为。</p>
 <p>那么，哪里要作出修改？Beck 和 Fowler（[1] 第 3 章）认为程序员要培养一种判断能力，找出程序中的坏味道。例如，在第一单元的练习中，可能大部分人都会复制 <code>lept_parse_null()</code> 的代码，作一些修改，成为 <code>lept_parse_true()</code> 和 <code>lept_parse_false()</code>。如果我们再审视这 3 个函数，它们非常相似。这违反编程中常说的 DRY（don’t repeat yourself）原则。本单元的第一个练习题，就是尝试合并这 3 个函数。</p>
 <p>另外，我们也可能发现，单元测试代码也有很重复的代码，例如 <code>test_parse_invalid_value()</code> 中我们每次测试一个不合法的 JSON 值，都有 4 行相似的代码。我们可以把它用宏的方式把它们简化：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TEST_ERROR(<span class="meta-keyword">error</span>, json)\</span></span><br><span class="line">    <span class="keyword">do</span> &#123;\</span><br><span class="line">        lept_value v;\</span><br><span class="line">        v.type = LEPT_FALSE;\</span><br><span class="line">        EXPECT_EQ_INT(error, lept_parse(&amp;v, json));\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_NULL, lept_get_type(&amp;v));\</span><br><span class="line">    &#125; <span class="keyword">while</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_expect_value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_EXPECT_VALUE, <span class="string">""</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_EXPECT_VALUE, <span class="string">" "</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TEST_ERROR(<span class="meta-keyword">error</span>, json)\</span></span><br><span class="line">    <span class="keyword">do</span> &#123;\</span><br><span class="line">        lept_value v;\</span><br><span class="line">        v.type = LEPT_FALSE;\</span><br><span class="line">        EXPECT_EQ_INT(error, lept_parse(&amp;v, json));\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_NULL, lept_get_type(&amp;v));\</span><br><span class="line">    &#125; <span class="keyword">while</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_expect_value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_EXPECT_VALUE, <span class="string">""</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_EXPECT_VALUE, <span class="string">" "</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>最后，我希望指出，软件的架构难以用单一标准评分，重构时要考虑平衡各种软件品质。例如上述把 3 个函数合并后，优点是减少重复的代码，维护较容易，但缺点可能是带来性能的少量影响。</p>
 <h2 id="2-JSON-数字语法"><a href="#2-JSON-数字语法" class="headerlink" title="2. JSON 数字语法"></a>2. JSON 数字语法</h2><p>回归正题，本单元的重点在于解析 JSON number 类型。我们先看看它的语法：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">ini</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number</span> = [ <span class="string">"-"</span> ] int [ frac ] [ exp ]</span><br><span class="line"><span class="attr">int</span> = <span class="string">"0"</span> / digit1-<span class="number">9</span> *digit</span><br><span class="line"><span class="attr">frac</span> = <span class="string">"."</span> <span class="number">1</span>*digit</span><br><span class="line"><span class="attr">exp</span> = (<span class="string">"e"</span> / <span class="string">"E"</span>) [<span class="string">"-"</span> / <span class="string">"+"</span>] <span class="number">1</span>*digit</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number</span> = [ <span class="string">"-"</span> ] int [ frac ] [ exp ]</span><br><span class="line"><span class="attr">int</span> = <span class="string">"0"</span> / digit1-<span class="number">9</span> *digit</span><br><span class="line"><span class="attr">frac</span> = <span class="string">"."</span> <span class="number">1</span>*digit</span><br><span class="line"><span class="attr">exp</span> = (<span class="string">"e"</span> / <span class="string">"E"</span>) [<span class="string">"-"</span> / <span class="string">"+"</span>] <span class="number">1</span>*digit</span><br></pre></td></tr></table></figure>
 
 <p>number 是以十进制表示，它主要由 4 部分顺序组成：负号、整数、小数、指数。只有整数是必需部分。注意和直觉可能不同的是，正号是不合法的。</p>
 <p>整数部分如果是 0 开始，只能是单个 0；而由 1-9 开始的话，可以加任意数量的数字（0-9）。也就是说，<code>0123</code> 不是一个合法的 JSON 数字。</p>
 <p>小数部分比较直观，就是小数点后是一或多个数字（0-9）。</p>
 <p>JSON 可使用科学记数法，指数部分由大写 E 或小写 e 开始，然后可有正负号，之后是一或多个数字（0-9）。</p>
 <p>JSON 标准 <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" target="_blank" rel="noopener">ECMA-404</a> 采用图的形式表示语法，也可以更直观地看到解析时可能经过的路径：</p>
-<p><a href="images/number.png" data-fancybox="group" data-caption="number" class="fancybox"><img alt="number" title="number" data-src="images/number.png" class="lazyload"></a></p>
+<p><img src="images/number.png" alt="number"></p>
 <p>上一单元的 null、false、true 在解析后，我们只需把它们存储为类型。但对于数字，我们要考虑怎么存储解析后的结果。</p>
 <h2 id="3-数字表示方式"><a href="#3-数字表示方式" class="headerlink" title="3. 数字表示方式"></a>3. 数字表示方式</h2><p>从 JSON 数字的语法，我们可能直观地会认为它应该表示为一个浮点数（floating point number），因为它带有小数和指数部分。然而，标准中并没有限制数字的范围或精度。为简单起见，leptjson 选择以双精度浮点数（C 中的 <code>double</code> 类型）来存储 JSON 数字。</p>
 <p>我们为 <code>lept_value</code> 添加成员：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">double</span> n;</span><br><span class="line">    lept_type type;</span><br><span class="line">&#125;lept_value;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">double</span> n;</span><br><span class="line">    lept_type type;</span><br><span class="line">&#125;lept_value;</span><br></pre></td></tr></table></figure>
 
 <p>仅当 <code>type == LEPT_NUMBER</code> 时，<code>n</code> 才表示 JSON 数字的数值。所以获取该值的 API 是这么实现的：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">lept_get_number</span><span class="params">(<span class="keyword">const</span> lept_value* v)</span> </span>&#123;</span><br><span class="line">    assert(v != <span class="literal">NULL</span> &amp;&amp; v-&gt;type == LEPT_NUMBER);</span><br><span class="line">    <span class="keyword">return</span> v-&gt;n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">lept_get_number</span><span class="params">(<span class="keyword">const</span> lept_value* v)</span> </span>&#123;</span><br><span class="line">    assert(v != <span class="literal">NULL</span> &amp;&amp; v-&gt;type == LEPT_NUMBER);</span><br><span class="line">    <span class="keyword">return</span> v-&gt;n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用者应确保类型正确，才调用此 API。我们继续使用断言来保证。</p>
 <h2 id="4-单元测试"><a href="#4-单元测试" class="headerlink" title="4. 单元测试"></a>4. 单元测试</h2><p>我们定义了 API 之后，按照 TDD，我们可以先写一些单元测试。这次我们使用多行的宏的减少重复代码：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TEST_NUMBER(expect, json)\</span></span><br><span class="line">    <span class="keyword">do</span> &#123;\</span><br><span class="line">        lept_value v;\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_PARSE_OK, lept_parse(&amp;v, json));\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_NUMBER, lept_get_type(&amp;v));\</span><br><span class="line">        EXPECT_EQ_DOUBLE(expect, lept_get_number(&amp;v));\</span><br><span class="line">    &#125; <span class="keyword">while</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_number</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"-0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"-0.0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.0</span>, <span class="string">"1"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1.0</span>, <span class="string">"-1"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.5</span>, <span class="string">"1.5"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1.5</span>, <span class="string">"-1.5"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">3.1416</span>, <span class="string">"3.1416"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E10</span>, <span class="string">"1E10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1e10</span>, <span class="string">"1e10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E+10</span>, <span class="string">"1E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E-10</span>, <span class="string">"1E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E10</span>, <span class="string">"-1E10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1e10</span>, <span class="string">"-1e10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E+10</span>, <span class="string">"-1E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E-10</span>, <span class="string">"-1E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.234E+10</span>, <span class="string">"1.234E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.234E-10</span>, <span class="string">"1.234E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"1e-10000"</span>); <span class="comment">/* must underflow */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TEST_NUMBER(expect, json)\</span></span><br><span class="line">    <span class="keyword">do</span> &#123;\</span><br><span class="line">        lept_value v;\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_PARSE_OK, lept_parse(&amp;v, json));\</span><br><span class="line">        EXPECT_EQ_INT(LEPT_NUMBER, lept_get_type(&amp;v));\</span><br><span class="line">        EXPECT_EQ_DOUBLE(expect, lept_get_number(&amp;v));\</span><br><span class="line">    &#125; <span class="keyword">while</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_number</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"-0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"-0.0"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.0</span>, <span class="string">"1"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1.0</span>, <span class="string">"-1"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.5</span>, <span class="string">"1.5"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1.5</span>, <span class="string">"-1.5"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">3.1416</span>, <span class="string">"3.1416"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E10</span>, <span class="string">"1E10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1e10</span>, <span class="string">"1e10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E+10</span>, <span class="string">"1E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1E-10</span>, <span class="string">"1E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E10</span>, <span class="string">"-1E10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1e10</span>, <span class="string">"-1e10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E+10</span>, <span class="string">"-1E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">-1E-10</span>, <span class="string">"-1E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.234E+10</span>, <span class="string">"1.234E+10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">1.234E-10</span>, <span class="string">"1.234E-10"</span>);</span><br><span class="line">    TEST_NUMBER(<span class="number">0.0</span>, <span class="string">"1e-10000"</span>); <span class="comment">/* must underflow */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>以上这些都是很基本的测试用例，也可供调试用。大部分情况下，测试案例不能穷举所有可能性。因此，除了加入一些典型的用例，我们也常会使用一些边界值，例如最大值等。练习中会让同学找一些边界值作为用例。</p>
 <p>除了这些合法的 JSON，我们也要写一些不合语法的用例：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_invalid_value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="comment">/* invalid number */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"+0"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"+1"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">".123"</span>); <span class="comment">/* at least one digit before '.' */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"1."</span>);   <span class="comment">/* at least one digit after '.' */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"INF"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"inf"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"NAN"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"nan"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test_parse_invalid_value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">    <span class="comment">/* invalid number */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"+0"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"+1"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">".123"</span>); <span class="comment">/* at least one digit before '.' */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"1."</span>);   <span class="comment">/* at least one digit after '.' */</span></span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"INF"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"inf"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"NAN"</span>);</span><br><span class="line">    TEST_ERROR(LEPT_PARSE_INVALID_VALUE, <span class="string">"nan"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-十进制转换至二进制"><a href="#5-十进制转换至二进制" class="headerlink" title="5. 十进制转换至二进制"></a>5. 十进制转换至二进制</h2><p>我们需要把十进制的数字转换成二进制的 <code>double</code>。这并不是容易的事情 [2]。为了简单起见，leptjson 将使用标准库的 <a href="https://en.cppreference.com/w/c/string/byte/strtof" target="_blank" rel="noopener"><code>strtod()</code></a> 来进行转换。<code>strtod()</code> 可转换 JSON 所要求的格式，但问题是，一些 JSON 不容许的格式，<code>strtod()</code> 也可转换，所以我们需要自行做格式校验。</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;  /* NULL, strtod() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lept_parse_number</span><span class="params">(lept_context* c, lept_value* v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>* <span class="built_in">end</span>;</span><br><span class="line">    <span class="comment">/* \TODO validate number */</span></span><br><span class="line">    v-&gt;n = strtod(c-&gt;json, &amp;<span class="built_in">end</span>);</span><br><span class="line">    <span class="keyword">if</span> (c-&gt;json == <span class="built_in">end</span>)</span><br><span class="line">        <span class="keyword">return</span> LEPT_PARSE_INVALID_VALUE;</span><br><span class="line">    c-&gt;json = <span class="built_in">end</span>;</span><br><span class="line">    v-&gt;type = LEPT_NUMBER;</span><br><span class="line">    <span class="keyword">return</span> LEPT_PARSE_OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;  /* NULL, strtod() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lept_parse_number</span><span class="params">(lept_context* c, lept_value* v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>* <span class="built_in">end</span>;</span><br><span class="line">    <span class="comment">/* \TODO validate number */</span></span><br><span class="line">    v-&gt;n = strtod(c-&gt;json, &amp;<span class="built_in">end</span>);</span><br><span class="line">    <span class="keyword">if</span> (c-&gt;json == <span class="built_in">end</span>)</span><br><span class="line">        <span class="keyword">return</span> LEPT_PARSE_INVALID_VALUE;</span><br><span class="line">    c-&gt;json = <span class="built_in">end</span>;</span><br><span class="line">    v-&gt;type = LEPT_NUMBER;</span><br><span class="line">    <span class="keyword">return</span> LEPT_PARSE_OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>加入了 number 后，value 的语法变成：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">yaml</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">value</span> <span class="string">=</span> <span class="literal">null</span> <span class="string">/</span> <span class="literal">false</span> <span class="string">/</span> <span class="literal">true</span> <span class="string">/</span> <span class="string">number</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">value</span> <span class="string">=</span> <span class="literal">null</span> <span class="string">/</span> <span class="literal">false</span> <span class="string">/</span> <span class="literal">true</span> <span class="string">/</span> <span class="string">number</span></span><br></pre></td></tr></table></figure>
 
 <p>记得在第一单元中，我们说可以用一个字符就能得知 value 是什么类型，有 11 个字符可判断 number：</p>
 <ul>
 <li>0-9/- ➔ number</li>
 </ul>
 <p>但是，由于我们在 <code>lept_parse_number()</code> 内部将会校验输入是否正确的值，我们可以简单地把余下的情况都交给 <code>lept_parse_number()</code>：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lept_parse_value</span><span class="params">(lept_context* c, lept_value* v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (*c-&gt;json) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'t'</span>:  <span class="keyword">return</span> lept_parse_true(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'f'</span>:  <span class="keyword">return</span> lept_parse_false(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'n'</span>:  <span class="keyword">return</span> lept_parse_null(c, v);</span><br><span class="line">        <span class="keyword">default</span>:   <span class="keyword">return</span> lept_parse_number(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\0'</span>: <span class="keyword">return</span> LEPT_PARSE_EXPECT_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lept_parse_value</span><span class="params">(lept_context* c, lept_value* v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (*c-&gt;json) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'t'</span>:  <span class="keyword">return</span> lept_parse_true(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'f'</span>:  <span class="keyword">return</span> lept_parse_false(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'n'</span>:  <span class="keyword">return</span> lept_parse_null(c, v);</span><br><span class="line">        <span class="keyword">default</span>:   <span class="keyword">return</span> lept_parse_number(c, v);</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\0'</span>: <span class="keyword">return</span> LEPT_PARSE_EXPECT_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="6-总结与练习"><a href="#6-总结与练习" class="headerlink" title="6. 总结与练习"></a>6. 总结与练习</h2><p>本单元讲述了 JSON 数字类型的语法，以及 leptjson 所采用的自行校验＋<code>strtod()</code>转换为 <code>double</code> 的方案。实际上一些 JSON 库会采用更复杂的方案，例如支持 64 位带符号／无符号整数，自行实现转换。以我的个人经验，解析／生成数字类型可以说是 RapidJSON 中最难实现的部分，也是 RapidJSON 高效性能的原因，有机会再另外撰文解释。</p>
 <p>此外我们谈及，重构与单元测试是互相依赖的软件开发技术，适当地运用可提升软件的品质。之后的单元还会有相关的话题。</p>
@@ -374,7 +288,7 @@
 <li>去掉 <code>test_parse_number_too_big</code> 中的 <code>#if 0 ... #endif</code>，执行测试，证实测试失败。仔细阅读 <a href="https://en.cppreference.com/w/c/string/byte/strtof" target="_blank" rel="noopener"><code>strtod()</code></a>，看看怎样从返回值得知数值是否过大，以返回 <code>LEPT_PARSE_NUMBER_TOO_BIG</code> 错误码。（提示：这里需要 <code>#include</code> 额外两个标准库头文件。）</li>
 </ol>
 <p>以上最重要的是第 3 条题目，就是要校验 JSON 的数字语法。建议可使用以下两个宏去简化一下代码：</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ISDIGIT(ch)         ((ch) &gt;= <span class="meta-string">'0'</span> &amp;&amp; (ch) &lt;= <span class="meta-string">'9'</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ISDIGIT1TO9(ch)     ((ch) &gt;= <span class="meta-string">'1'</span> &amp;&amp; (ch) &lt;= <span class="meta-string">'9'</span>)</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ISDIGIT(ch)         ((ch) &gt;= <span class="meta-string">'0'</span> &amp;&amp; (ch) &lt;= <span class="meta-string">'9'</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ISDIGIT1TO9(ch)     ((ch) &gt;= <span class="meta-string">'1'</span> &amp;&amp; (ch) &lt;= <span class="meta-string">'9'</span>)</span></span><br></pre></td></tr></table></figure>
 
 <p>另一提示，在校验成功以后，我们不再使用 <code>end</code> 指针去检测 <code>strtod()</code> 的正确性，第二个参数可传入 <code>NULL</code>。</p>
 <p>如果你遇到问题，有不理解的地方，或是有建议，都欢迎在评论或 <a href="https://github.com/miloyip/json-tutorial/issues" target="_blank" rel="noopener">issue</a> 中提出，让所有人一起讨论。</p>
@@ -390,197 +304,137 @@
 </ol>
 <p>其他常见问答将会从评论中整理。</p>
 
-      
     </div>
-    
-    
-    
 
     
-
+    
     
 
-    
+      <footer class="post-footer">
 
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/01/17/readme/" rel="next" title="readme">
-                <i class="fa fa-chevron-left"></i> readme
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/17/tutorial01_answer/" rel="prev" title="tutorial01_answer">
-                tutorial01_answer <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/17/readme/" rel="prev" title="readme">
+      <i class="fa fa-chevron-left"></i> readme
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/17/tutorial01_answer/" rel="next" title="tutorial01_answer">
+      tutorial01_answer <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">太阳战士</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始的-JSON-库教程（二）：解析数字"><span class="nav-number">1.</span> <span class="nav-text">从零开始的 JSON 库教程（二）：解析数字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-初探重构"><span class="nav-number">1.1.</span> <span class="nav-text">1. 初探重构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-JSON-数字语法"><span class="nav-number">1.2.</span> <span class="nav-text">2. JSON 数字语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数字表示方式"><span class="nav-number">1.3.</span> <span class="nav-text">3. 数字表示方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-单元测试"><span class="nav-number">1.4.</span> <span class="nav-text">4. 单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-十进制转换至二进制"><span class="nav-number">1.5.</span> <span class="nav-text">5. 十进制转换至二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-总结与练习"><span class="nav-number">1.6.</span> <span class="nav-text">6. 总结与练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-参考"><span class="nav-number">1.7.</span> <span class="nav-text">7. 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-常见问题"><span class="nav-number">1.8.</span> <span class="nav-text">8. 常见问题</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始的-JSON-库教程（二）：解析数字"><span class="nav-number">1.</span> <span class="nav-text">从零开始的 JSON 库教程（二）：解析数字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-初探重构"><span class="nav-number">1.1.</span> <span class="nav-text">1. 初探重构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-JSON-数字语法"><span class="nav-number">1.2.</span> <span class="nav-text">2. JSON 数字语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数字表示方式"><span class="nav-number">1.3.</span> <span class="nav-text">3. 数字表示方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-单元测试"><span class="nav-number">1.4.</span> <span class="nav-text">4. 单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-十进制转换至二进制"><span class="nav-number">1.5.</span> <span class="nav-text">5. 十进制转换至二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-总结与练习"><span class="nav-number">1.6.</span> <span class="nav-text">6. 总结与练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-参考"><span class="nav-number">1.7.</span> <span class="nav-text">7. 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-常见问题"><span class="nav-number">1.8.</span> <span class="nav-text">8. 常见问题</span></a></li></ol></li></ol></div>
+      </div>
       <!--/noindex-->
-      
 
-      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">太阳战士</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">太阳战士</span>
-
-  
 </div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
 
         
 
@@ -590,122 +444,25 @@
 
 
 
-        
+
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -723,22 +480,8 @@
 
 
 
-  
 
 
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 
