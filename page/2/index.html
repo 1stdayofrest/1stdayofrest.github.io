@@ -1,153 +1,2801 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Hexo</title><meta name="description" content=""><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hexo"><meta name="twitter:description" content=""><meta name="twitter:image" content="http://yoursite.com/img/avatar.png"><meta property="og:type" content="website"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://yoursite.com/page/2/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content=""><meta property="og:image" content="http://yoursite.com/img/avatar.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
-var t = Cookies.get("theme");
-if (autoChangeMode == '1'){
-const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-if (t === undefined){
-  if (isLightMode) activateLightMode()
-  else if (isDarkMode) activateDarkMode()
-  else if (isNotSpecified || hasNoSupport){
-    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-    now = new Date();
-    hour = now.getHours();
-    isNight = hour < 6 || hour >= 18
-    isNight ? activateDarkMode() : activateLightMode()
-}
-} else if (t == 'light') activateLightMode()
-else activateDarkMode()
+<!DOCTYPE html>
 
 
-} else if (autoChangeMode == '2'){
-  now = new Date();
-  hour = now.getHours();
-  isNight = hour < 6 || hour >= 18
-  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode() 
-} else {
-  if ( t == 'dark' ) activateDarkMode()
-  else if ( t == 'light') activateLightMode()
-}
 
-function activateDarkMode(){
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
-  }
-}
-function activateLightMode(){
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
-  }
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/page/2/"><link rel="preload" href="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" as="image"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  bookmark: {
-    title: 'Snackbar.bookmark.title',
-    message_prev: 'Press',
-    message_next: 'to bookmark this page'
-  },
-  runtime_unit: 'days',
-  runtime: true,
-  copyright: undefined,
-  ClickShowText: undefined,
-  medium_zoom: false,
-  fancybox: true,
-  Snackbar: undefined,
-  baiduPush: false,
-  isHome: true,
-  isPost: false
   
-}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Hexo</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">26</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><div id="body-wrap"><nav class="full_page" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg)"><div id="site-info"><div id="site-title"><span class="blogtitle">Hexo</span></div><div id="site-sub-title"><span class="subtitle"></span></div><div id="site-social-icons"><a class="social-icon" href="https://github.com/jerryc127" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:xxxxxxxx@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div><div class="scroll-down"><i class="fa fa-angle-down scroll-down-effects"></i></div></nav><main id="content-outer"><div class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item article-container"><div class="post_cover left_radius"><a href="/2020/01/17/mysql-2/" title="mysql-2"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql-2"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/mysql-2/" title="mysql-2">mysql-2</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">mysql数据库设计与优化与架构 模拟场景（京东商城）任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
-有问题或者宝贵意见联系我的QQ,非常希望你的加入！##简介：
-设计：
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="余生的第一天">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="余生的第一天">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="太阳战士">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+
+
+
+
+
+  <title>余生的第一天</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">余生的第一天</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/mysql-2/" itemprop="url">mysql-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
+有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##简介：</p>
+<pre><code>设计：
 1.常见业务处理
 2.执行计划分析
 3.如何优化分页查询示例
 4.如何删除重复数据示例
-5.如何进行分区间数据统 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover right_radius"><a href="/2020/01/17/mysql-3/" title="mysql-3"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql-3"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/mysql-3/" title="mysql-3">mysql-3</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">数据库备份和恢复 + 数据库架构变迁有问题或者宝贵意见联系我的QQ,非常希望你的加入！简介：
+5.如何进行分区间数据统计显示
+6.捕获有问题的sql慢查日志</code></pre><p><strong>执行计划能够告诉我们什么</strong></p>
+<pre><code>1.sql如何使用索引
+2.链接查询的执行顺序
+3.查询扫描数据行数</code></pre><p><strong>执行计划内容</strong></p>
+<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql1.png" class="lazyload"></a></p>
+<pre><code>ID列：数据为一组数字表示执行select语句的顺序 
+     id值相同的时候执行顺数由上至下
+     id值越大优先级越高，越先被执行
+     ID列中的如果数据为一组数字，表示执行SELECT语句的顺序；如果为NULL，则说明这一行数据是由另外两个SQL语句进行 UNION操作后产生的结果集
 
-详情请下载
-xmind总结  |
-</div></div></div><div class="recent-post-item article-container"><div class="post_cover left_radius"><a href="/2020/01/17/mysql-master-slave/" title="mysql-master-slave"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql-master-slave"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/mysql-master-slave/" title="mysql-master-slave">mysql-master-slave</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">分库分表及mycat的整理实操(未整理马上更新)本文章安排目标：
+SELECT_TYPE |_ SIMPLE不包含子查询或者是UNION操作的查询
+            |_ PRIMARY 查询中如果包含任何子查询，那么最外层的查询则被标记为 PRIMARY
+            |_ SUBQUERY select 列表中的子查询
+            |_ DEPENDENT 依赖外部结果的子查询
+            |_ SUBQUERY 依赖外部结果的子查询 
+            |_ UNION Union操作的第二个或是之后的查询的值为union
+            |_ DEPENDENT UNION 当UNION作为子查询时，第二或是第二个后的查询的select_type值
+            |_ UNION RESULT UNION产生的结果集
+            |_ DERIVED  出现在FROM子句中的子查询
+
+TABLE  |_ 所在表的名称，如果表取了别名，则显示的是别名
+       |_ &lt;union M,N&gt;： 由ID为M,N查询union产生的结果集
+       |_ &lt;derived N&gt;/&lt;subquery N&gt; ：由ID为N的查询产生的结果
+
+PARTITIONS 分区表 
+查询匹配的记录来自哪一个分区
+对于分区表，显示查询的分区ID
+对于非分区表，显示为NULL
+
+TYPE列
+     |_ system     这是const联接类型的一个特例，当查询的表只有一行时使用 
+     |_ const     表中有且只有一个匹配的行时使用，如对主键或是唯一索引的查询，这是效率最高的联接方式
+     |_ eq_ref     唯一索引或主键索引查询，对应每个索引键，表中只有一条记录与之匹配
+     |_ ref     非唯一索引查找，返回匹配某个单独值的所有行
+     |_ ref_or_null     类似于ref类型的查询，但是附加了对NULL值列的查询
+     |_ index_merge     该联接类型表示使用了索引合并优化方法
+     |_ range     索引范围扫描，常见于between、&gt;、&lt;这样的查询条件
+     |_ index     FULL index Scan 全索引扫描，同ALL的区别是，遍历的是索引树
+     |_ ALL     FULL TABLE Scan 全表扫描，这是效率最差的联接方式
+
+ Extra列
+     |_ Distinct     优化distinct操作，在找到第一个匹配的元素后即停止查找
+     |_ Not exists     使用not exists来优化查询
+     |_ Using filesort     使用额外操作进行排序，通常会出现在order by或group by查询中
+     |_ Using index     使用了覆盖索引进行查询
+     |_ Using temporary     MySQL需要使用临时表来处理查询，常见于排序，子查询，和分组查询
+     |_ Using where     需要在MySQL服务器层使用WHERE条件来过滤数据
+     |_ select tables optimized away     直接通过索引来获得数据，不用访问表，这种情况通常效率是最高的
+
+ POSSIBLE_KEYS列
+      |_    指出MySQL能使用哪些索引来优化查询
+      |_    查询列所涉及到的列上的索引都会被列出，但不一定会被使用
+
+ KEY列
+      |_查询优化器优化查询实际所使用的索引
+      |_如果表中没有可用的索引，则显示为NULL
+      |_如果查询使用了覆盖索引，则该索引仅出现在Key列中
+
+ KEY_LEN列
+      |_ 显示MySQL索引所使用的字节数，在联合索引中如果有3列，假如3列字段总长度为100个字节
+         Key_len显示的可能会小于100字节，比如30字节
+         这就说明在查询过程中没有使用到联合索引的所有列，只是利用到了前面的一列或2列
+      |_ 表示索引字段的最大可能长度 
+      |_ Key_len的长度由字段定义计算而来，并非数据的实际长度
+
+ Ref列
+      |_ 表示当前表在利用Key列记录中的索引进行查询时所用到的列或常量
+      |_
+      |_
+
+ rows列
+
+      |_ 表示MySQL通过索引的统计信息，估算出来的所需读取的行数（关联查询时，显示的是每次嵌套查询时所需要的行数
+      |_ Rows值的大小是个统计抽样结果，并不十分准确
+
+ Filtered列 
+      |_ 表示返回结果的行数占需读取行数的百分比
+      |_ Filtered列的值越大越好（值越大，表明实际读取的行数与所需要返回的行数越接近）
+      |_ Filtered列的值依赖统计信息，所以同样也不是十分准确，只是一个参考值
+
+ 执行计划的限制
+     |_ 无法展示存储过程，触发器，UDF对查询的影响
+     |_ 无法使用EXPLAIN对存储过程进行分析
+     |_ 早期版本的MySQL只支持对SELECT语句进行分析
+
+ ----------------------------------------------------
+ 如何删除重复数据 
+ 删除评论表中的对同一个商品的重复评论，只保留最早的一条
+
+ |--- 查看是否存在对于同一订单同一商品的重复评论，如果存在，进行后续步骤
+      查询语句：
+      SELECT order_id,product_id,COUNT(*) FROM product_comment
+      GROUP BY order_id,product_id HAVING COUNT(*) &gt; 1;
+
+ |--- 备份product_comment表（避免误删除的情况）
+      CREATE  TABLE bak_product_comment_190108 AS  SELECT * FROM product_comment;
+      错误代码：1786 Statement violates GTID consistency:CREATE TABLE ... SELECT.
+      则换用下面的语句
+          CREATE  TABLE bak_product_comment_190108 AS  LIKE  product_comment;
+          INSERT INTO bak_product_comment_190108  SELECT * FROM product_comment；
+      错误代码：1786
+      Statement violates GTID consistency:CREATE TABLE ... SELECT.
+      错误原因
+      这是因为在5.6及以上的版本内，开启了 enforce_gtid_consistency=true 功能导致的，MySQL官方解释说当启用 enforce_gtid_consistency 功能的时候，MySQL只允许能够保障事务安全，并且能够被日志记录的SQL语句被执行，像create table … select 和 create temporarytable语句，以及同时更新事务表和非事务表的SQL语句或事务都不允许执行。
+      解决办法
+
+    |---- 修改 ：
+          SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = off;
+          配置文件中 ：
+          ENFORCE_GTID_CONSISTENCY = off;
+    |---- 
+          create table xxx as select 的方式会拆分成两部分。
+          create table xxxx like data_mgr;
+          insert into xxxx select *from data_mgr;
+          如果表数据量比较大，则使用mysql dump的方式导出成文件进行备份
+
+
+    |---- 删除同一订单的重复评论
+          删除语句：
+          DELETE a FROM product_comment a 
+          JOIN(
+          SELECT order_id,product_id,MIN(comment_id) AS comment_id 
+          FROM product_comment
+          GROUP BY order_id,product_id 
+          HAVING COUNT(*) &gt; 1
+          ) b on a.order_id = b.order_id AND a.product_id = b.product_id
+          AND a.comment_id &gt; b.comment_id;
+
+
+  分区间统计 
+
+  统计消费总金额大于1000元的，800到1000元的，500到800元的，以及500元以下的人数
+
+
+   SELECT 
+   COUNT(CASE WHEN IFNULL(total_money,0) &gt;= 1000 THEN a.customer_id END) AS &apos;大于1000&apos;
+   ,COUNT(CASE WHEN IFNULL(total_money,0) &gt;= 800 AND IFNULL(total_money,0)&lt;1000 
+       THEN a.customer_id END) AS &apos;800~1000&apos;
+   ,COUNT(CASE WHEN IFNULL(total_money,0) &gt;= 500 AND IFNULL(total_money,0)&lt;800 
+       THEN a.customer_id END) AS &apos;500~800&apos;
+   ,COUNT(CASE WHEN IFNULL(total_money,0) &lt; 500 THEN a.customer_id END)  &apos;小于500&apos;
+   FROM mc_userdb.customer_login a 
+   LEFT JOIN 
+   ( 
+   SELECT customer_id,SUM(order_money) AS total_money
+       FROM mc_orderdb.order_master 
+       GROUP BY customer_id
+       ) b
+   ON a.customer_id = b.customer_id</code></pre><p> <strong>for example测试表分析执行计划 (联合索引和单列索引)</strong> </p>
+<pre><code>CREATE TABLE `miaosha_mysql_test` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `userId` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT &apos;&apos; COMMENT &apos;用户id&apos;,
+  `mobile` varchar(24) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;手机号码&apos;,
+  `month` varchar(32) DEFAULT NULL COMMENT &apos;月份&apos;,
+  `createTime` datetime DEFAULT NULL COMMENT &apos;创建时间&apos;,
+  `overTime` datetime DEFAULT NULL COMMENT &apos;修改时间&apos;,
+  PRIMARY KEY (`id`),
+  KEY `联合索引` (`userId`,`mobile`,`month`)
+) ENGINE=InnoDB AUTO_INCREMENT=71185 DEFAULT CHARSET=utf8 COMMENT=&apos;测试&apos;</code></pre><p>  建立联合索引的列userId,mobile,month 三个建立联合索引</p>
+<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos;</code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql2.png" class="lazyload"></a></p>
+<pre><code>有索引可用
+
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  mobile=&apos;166011&apos; ; </code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql3.png" class="lazyload"></a></p>
+<pre><code>无索引可用
+
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; or mobile=&apos;166011&apos; ; </code></pre><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql4.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql4.png" class="lazyload"></a></p>
+<pre><code>无索引可用</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql5.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql5.png" class="lazyload"></a></p>
+<pre><code>有索引可用 当然这才是正确的用法！！！</code></pre><hr>
+<p> <strong>创建三个单列的索引</strong></p>
+<pre><code> CREATE INDEX useridsingle  ON miaosha_mysql_test(userid);
+ CREATE INDEX mobilesingle  ON miaosha_mysql_test(mobile);
+ CREATE INDEX monthsingle  ON miaosha_mysql_test(month);
+
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE userid=&apos;2222&apos; and mobile=&apos;166011&apos; and month=1;</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql7.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql7.png" class="lazyload"></a></p>
+<pre><code>只是用了useridsingle 有索引可用 
+
+EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE mobile=&apos;13281899972&apos; AND month=&apos;2018-04&apos;</code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql8.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql8.png" class="lazyload"></a></p>
+<pre><code>EXPLAIN SELECT * FROM `miaosha_mysql_test` WHERE  userid=&apos;2222&apos; OR mobile=&apos;13281899972&apos; </code></pre><p> <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql9.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/mysql9.png" class="lazyload"></a></p>
+<pre><code>有索引可用 都用上了</code></pre><p><strong>多个单列索引在多条件查询时只会生效第一个索引！所以多条件联合查询时最好建联合索引！</strong></p>
+<p><strong>最左前缀原则：</strong></p>
+<pre><code>|_在创建联合索引时，要根据业务需求，where子句中使用最频繁的一列放在最左边。这样的话扩展性较好
+|_比如 userid 经常需要作为查询条件，而 mobile 不常常用
+|_则需要把 userid 放在联合索引的第一位置，即最左边
+|_第一个字段是范围查询需要单独建一个索引</code></pre><p> <strong>同时存在联合索引和单列索引（字段有重复的），这个时候查询mysql会怎么用索引呢</strong></p>
+<pre><code>当一个表有多条索引可走，那么会根据优化器的查询成本来选择走哪个索引
+
+ 联合索引本质：
+ 当创建(a,b,c)联合索引时，相当于创建了(a)单列索引，(a,b)联合索引以及(a,b,c)联合索引 
+ 想要索引生效的话,只能使用 a和a,b和a,b,c三种组合，当然a,c也可以但是只用到了a
+
+ 1.需要加索引的字段，要在where条件中 
+ 2、数据量少的字段不需要加索引；因为建索引有一定开销，如果数据量小则没必要建索引（速度反而慢） 
+ 3、如果where条件中是OR关系，加索引不起作用 
+ 4、联合索引比对每个列分别建索引更有优势，因为索引建立得越多就越占磁盘空间，
+ 在更新数据的时候速度会更慢。另外建立多列索引时，顺序也是需要注意的，
+ 应该将严格的索引放在前面，这样筛选的力度会更大，效率更高。</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/mysql-3/" itemprop="url">mysql-3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数据库备份和恢复-数据库架构变迁"><a href="#数据库备份和恢复-数据库架构变迁" class="headerlink" title="数据库备份和恢复 + 数据库架构变迁"></a>数据库备份和恢复 + 数据库架构变迁</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/MySQLGood.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/MySQLGood.png" class="lazyload"></a></p>
+<p><a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/sql.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/sql.jpg" class="lazyload"></a></p>
+<p><strong>详情请下载</strong></p>
+<p><a href="/docs/MySQL性能优化.xmind">xmind总结</a>  |</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql-master-slave/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/mysql-master-slave/" itemprop="url">mysql-master-slave</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="分库分表及mycat的整理实操-未整理马上更新"><a href="#分库分表及mycat的整理实操-未整理马上更新" class="headerlink" title="分库分表及mycat的整理实操(未整理马上更新)"></a>分库分表及mycat的整理实操(未整理马上更新)</h3><pre><code>本文章安排目标：
 1. 对于存储层的压力知道如何去提供解决方案和思路
 2. 对分库分表的常用手段有全面了解
 3. 了解Mysql的主从及binlog
 4. 知道Mycat及其他相似的中间件
 5. Mycat是什么
-6. Mycat中的核心概念及配置文件 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover right_radius"><a href="/2020/01/17/mysql/" title="mysql"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/mysql/" title="mysql">mysql</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">mysql数据库设计与优化与架构 模拟场景（京东商城）任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
-有问题或者宝贵意见联系我的QQ,非常希望你的加入！##简介：
-设计：
+6. Mycat中的核心概念及配置文件分析
+7. 水平分表实战（单库、跨库）
+8. Mycat读写分离实战
+9. Mycat 全局序列号
+10. Mycat常用分片规则</code></pre><p>##思路(3why??)</p>
+<p><strong>为什么要进行分库分表</strong>  </p>
+<pre><code>为什么要分库分表、
+超大容量问题
+性能问题
+如何去做到
+垂直切分、 水平切分
+1. 垂直分库； 解决的是表过多的问题
+2. 垂直分表； 解决单表列过多的问题
+
+水平切分； 大数据表拆成小表
+常见的拆分策略
+垂直拆分（er分片）
+
+水平拆分
+一致性hash
+范围切分 可以按照ID
+日期拆分
+拆分以后带来的问题
+跨库join的问题
+1. 设计的时候考虑到应用层的join问题。
+2. 在服务层去做调用；
+A服务里查询到一个list
+for(list){
+   bservice.select(list);
+}
+3. 全局表
+1. 数据变更比较少的基于全局应用的表
+2. 
+4. 做字段冗余（空间换时间的做法）
+订单表。 商家id  商家名称
+商家名称变更- 定时任务、任务通知
+跨分片数据排序分页
+唯一主键问题
+用自增id做主键
+UUID 性能比较低
+snowflake 
+mongoDB 
+zookeeper 
+数据库表
+分布式事务问题
+多个数据库表之间保证原子性  性能问题； 互联网公司用强一致性分布式事务比较少
+
+分库分表最难的在于业务的复杂度； 
+前提： 水平分表的前提是已经存在大量的业务数据。而这个业务数据已经渗透到了各个应用节点
+
+如何权衡当前公司的存储需要优化
+1． 提前规划（主键问题解决、 join问题）
+2． 当前数据单表超过1000W、每天的增长量持续上升
+
+Mysql的主从
+数据库的版本5.7版本
+安装以后文件对应的目录
+mysql的数据文件和二进制文件： /var/lib/mysql/
+mysql的配置文件： /etc/my.cnf
+mysql的日志文件： /var/log/mysql.log
+
+140 为master 
+
+1. 创建一个用户’repl’,并且允许其他服务器可以通过该用户远程访问master，通过该用户去读取二进制数据，实现数据同步
+create user repl identified by ‘repl； repl用户必须具有replication slave权限，除此之外其他权限都不需要
+grant replication slave on *.* to ‘repl’@’%’ identified BY ‘repl’ ; 
+2. 修改140 my.cnf配置文件，在[mysqld] 下添加如下配置
+log-bin=mysql-bin //启用二进制日志文件
+server-id=130 服务器唯一ID 
+3. 重启数据库 systemctl restart mysqld sudo /etc/init.d/mysql start
+4. 登录到数据库，通过show master status  查看master的状态信息
+142 为slave
+1. 修改142 my.cnf配置文件， 在[mysqld]下增加如下配置
+server-id=132  服务器id，唯一
+relay-log=slave-relay-bin
+relay-log-index=slave-relay-bin.index
+read_only=1
+2. 重启数据库： systemctl restart mysqld
+3. 连接到数据库客户端，通过如下命令建立同步连接
+change master to master_log_file=&apos;mysql-bin 隆.000002&apos;,master_log_pos=154;
+error:
+ERROR 1794 (HY000): Slave is not configured or failed to initialize properly. You must at least set --server-id to enable either a master or a slave. Additional error messages can be found in the MySQL error log.
+最后通过如下的操作解决的问题，具体原因还尚未清楚
+CHANGE MASTER TO 
+MASTER_HOST=&apos;39.107.245.253&apos;, 
+MASTER_USER=&apos;repl&apos;, 
+MASTER_PASSWORD=&apos;repl&apos;, 
+MASTER_LOG_FILE=&apos;mysql-bin 隆.000001&apos;, 
+MASTER_LOG_POS= 154;
+(1)登录数据库后，删除5张表，并重新导入脚本
+use mysql
+drop table  slave_master_info;
+drop table  slave_relay_log_info;
+drop table  slave_worker_info;
+drop table  innodb_index_stats;
+drop table  innodb_table_stats;
+--------------------- 
+2.重启数据库
+change master to master_host=&apos;39.107.245.253&apos;, master_port=3306,master_user=&apos;repl&apos;,master_password=&apos;repl&apos;,master_log_file=&apos;mysql-bin 隆.000001&apos;,master_log_pos=154;
+  红色部分从master的show master status可以找到对应的值，不能随便写。
+4. 执行 start slave
+5. show slave status\G;查看slave服务器状态，当如下两个线程状态为yes，表示主从复制配置成功
+Slave_IO_Running=Yes
+Slave_SQL_Running=Yes
+主从同步的原理
+
+1. master记录二进制日志。在每个事务更新数据完成之前，master在二日志记录这些改变。MySQL将事务串行的写入二进制日志，即使事务中的语句都是交叉执行的。在事件写入二进制日志完成后，master通知存储引擎提交事务
+2. slave将master的binary log拷贝到它自己的中继日志。首先，slave开始一个工作线程——I/O线程。I/O线程在master上打开一个普通的连接，然后开始binlog dump process。Binlog dump process从master的二进制日志中读取事件，如果已经跟上master，它会睡眠并等待master产生新的事件。I/O线程将这些事件写入中继日志
+3. SQL线程从中继日志读取事件，并重放其中的事件而更新slave的数据，使其与master中的数据一致
+
+
+binlog： 用来记录mysql的数据更新或者潜在更新（update xxx where id=x effect row 0）;
+文件内容存储：/var/lib/mysql
+
+mysqlbinlog --base64-output=decode-rows -v mysql-bin.000001  查看binlog的内容
+
+binlog的格式
+statement ： 基于sql语句的模式。update table set name =””; effect row 1000； uuid、now() other function
+row： 基于行模式; 存在1000条数据变更；  记录修改以后每一条记录变化的值
+mixed: 混合模式，由mysql自动判断处理
+修改binlog_formater,通过在mysql客户端输入如下命令可以修改
+set global binlog_format=’row/mixed/statement’;
+或者在vim /etc/my.cnf  的[mysqld]下增加binlog_format=‘mixed’
+
+主从同步的延时问题
+主从同步延迟是怎么产生的
+1. 当master库tps比较高的时候，产生的DDL数量超过slave一个sql线程所能承受的范围，或者slave的大型query语句产生锁等待
+2. 网络传输： bin文件的传输延迟
+3. 磁盘的读写耗时：文件通知更新、磁盘读取延迟、磁盘写入延迟
+解决方案
+1. 在数据库和应用层增加缓存处理，优先从缓存中读取数据
+2. 减少slave同步延迟，可以修改slave库sync_binlog属性； 
+sync_binlog=0  文件系统来调度把binlog_cache刷新到磁盘
+sync_binlog=n  
+3. 增加延时监控
+Nagios做网络监控
+mk-heartbeat
+
+5. Mysql的主从配置
+6. 了解binlog及主从复制原理  </code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/mysql/" itemprop="url">mysql</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="mysql数据库设计与优化与架构-模拟场景（京东商城）"><a href="#mysql数据库设计与优化与架构-模拟场景（京东商城）" class="headerlink" title="mysql数据库设计与优化与架构 模拟场景（京东商城）"></a>mysql数据库设计与优化与架构 模拟场景（京东商城）</h3><pre><code>任何优化多需要场景，本次所有的场景为京东商城的数据库设计模拟！
+有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##简介：</p>
+<pre><code>设计：
 1.数据库开发规范的制定
 2.数据库结构与设计
 3.mysql执行计划的分析
 4.mysql数据库的备份和恢复
- ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover left_radius"><a href="/2020/01/17/netty/" title="netty"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="netty"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/netty/" title="netty">netty</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">Netty 教程有问题或者宝贵意见联系我的QQ,非常希望你的加入！####了解NIO和IO
+5.mysql高性能高可用架构变迁</code></pre><p> <strong>场景说明</strong></p>
+<pre><code>用户登录-&gt;选购商品-&gt;加购物车-&gt;检查库存-&gt;提交订单-&gt;货到付款-- Y -- 发货
+                                                   |N--订单付款
+
+用户模块  -- 完成用户注册和登录验证
+商品模块  -- 前后台商品管理和游览
+订单模块  -- 订单和购物车的生成和管理
+仓配模块  -- 仓库库存和物流的管理</code></pre><p><strong>数据库设计规范</strong></p>
+<pre><code>   逻辑设计 + 物理设计
+
+    1.数据库命名规范
+    2.数据库基本设计规范
+    3.数据库索引设计规范
+    4.数据库字段设计规范
+    5.数据库的sql开发规范
+    数据库操作行为规范（运维标准）
+
+ 数据库设计规范 
+
+ 1.所有的数据库对象名称必须使用小写字母并用下划线分割（mysql数据库大小写敏感） 
+ 例如: 不同的数据库名  DbName dbname 不同的表名 Table table taBLe
+
+ 2.所有数据库对象名称禁止使用mysql保留关键字
+ 例如 ：select id , username , from ,age from table_user 会造成mysql 歧义
+
+ 3.数据库对象的命名要做到见名识义，并且最好不要超过32个字符
+ 例如：秒杀用户表  miaosha_userdb good!!
+      用户账号表  user_account good!!
+
+ 4.所有的临时表必须义tmp为前缀并且已日期为后缀，备份库备份表必须义bak为前缀并且已日期为后缀，大的可以到处sql
+
+ 5.所有的数据存储的列名和列类型必须一致
+ custom_inf                     order_master 
+ customer_id  int unsigned      customer_id  int unsigned  
+ 必须一致否则会影响性能，一般这种列都是作为表的关联列，如果两个字段的数据类型不同，数据库则会进行隐式的数据类型
+ 转换降低性能，造成列上的索引失效！！
+
+ 存储规范
+
+ 1.所有的表必须使用Innodb存储引擎 支持事物行级锁，更好的恢复性，并发性能更好
+ 2.大部分数据库表字符集要统一   （大部分使用UTF-8） 编码乱码 
+ 3.所有的表和字段都要添加注释 数据字典的维护
+ 4.尽量控制单表的数据量大小，建议控制在500万以内 当然500万并不是mysql的限制
+   过大可以通过历史数据归档，分库分表的手段来控制数据量的大小（订单表一类的比较重要）
+ 5.尽量做到冷热数据分离，减少表的宽度  列最大4096列 
+   减少磁盘io,保证热数据的内存缓存命中率，控制列数量也可以更加有效的利用缓存，避免读入无用的冷数据
+   经常使用的列放在一个表中
+ 6.禁止在表中建立预留字段
+   预留字段命名很难做到见识义，无法选择合适的类型，对预留字段修改会对表进行锁定
+
+ 行为规范
+
+ 1.禁止存储图片，文件等二进制文件，造成大量的io操作 （存在相应的文件服务器上）
+ 2.禁止再线上进行数据库的压力测试
+ 3.禁止从开发环境测试环境直连生产环境
+
+ 索引设计规范（不要滥用索引）
+
+ 1.建议单表索引数量不超过5个 索引并不是越多越好过多索引降低效率，优化器过多索引选出最优解
+ innodb 是按照那个索引的顺序来组织表的呢   主键
+ 不使用更新频繁的列作为主键，不使用多列主键
+ 不使用uuid,md5,hash 字符串列作为主键  不能保证顺序增长
+
+ 2.那些哪些列上建立索引？？？
+   1.我们经常在select update delete语句的where从句的列建立索引
+   2.包含在order by , group by , distinct 中的字段
+   3.多表join的关联列
+
+ 3.如何选择索引的顺序？
+ 联合索引中  索引从左到右的顺序
+ 建立索引的目的 查询数据的时候可以根据索引来进行数据查找-- 从而减少磁盘的随机io , 增加查询的性能，所以
+ 如果我们的索引能够过滤出更少的数据那么我们从磁盘读入的数据则越少
+
+   1.区分度最高的列放在联合索引的最左侧 区分度--数据唯一值的数量/总行数 区分度最大的就应该是主键了
+   2.尽量字段长度小的列放在联合索引的最左侧 
+   3.使用最频繁的列放在最左侧 
+   4，尽量避免冗余和重复的索引   重复索引了： primary key(id) , index(id) , unique index(id)
+      冗余： index(a,b,c) , index(a.b)
+   5.对于频繁使用的查询先优先考虑覆盖索引（包含了所有的查询字段的索引）
+   6.尽量使用外键 不建议使用外检约束，但是一定要在表与表之间的关联键上建立索引
 
 
+ 数据库字段设计规范
 
-NIO
-IO
+ 1.优先选择符合存储需要的最小的数据类型
+   1.将字符串转换成数字类型存储  INET_ATON(&apos;255.255.255.255&apos;) = 4294967295 字符串转ip
+   将字符串转换成数字类型存储  INET_NTOA(&apos;4294967295&apos;) = 255.255.255.255 ip 转字符串
+   2.对于非负数据采用无符号整形进行存储  signed int -2147483648 -- 2147483647
+      unsigned int -0 -- 4294967295    
+   3.VARCHAR(N)中的N代表的是字符数而不是字节数 使用UTF-8存储汉字varchar(255) = 765个字节 存储255个汉字
+   4.过大的长度会消耗更多的内存 varchar是一个可变的长度 
+ 2.避免使用text,blob数据类型 建议blob或者时text分离到单独的表中
+   避免使用enum数据类型
+ 3.尽可能的所有列都定义为NOT NULL
+   索引null列需要额外的空间来保存，所以需要占用更多的空间
+   进行比较和计算的时候要对null值进行特别的处理
+ 4.字符串存储日期型的数据不是正确的 
+    无法用日期函数来进行计算和比较
+    用字符串存储日期要占用更多的空间
+ 5.timestamp 和datatime 类型存储时间
+   timestamp 存储范围有限制 1970-01-01 00:00:01 ～2038-01-19 03:14:07 
+   timestamp占用4字节和INT相同，但是INT可读性能高
+ 6.财务相关的金额类数据，必须由decimal类型存储
+   decimal类型为精准的浮点数，在计算时不会丢失精度
+   占用空间由定义的宽度来决定
+   可用于存储比bigint更大的整数类型
+
+数据库sql开发规范
+
+ 1.建议使用预编译语句对数据库进行操作
+
+ 2.避免数据类型的隐式转换 不同表的相同列的数据类型不一致 会导致索引失效
+
+ 3.重复利用已经存在的索引
+    1.避免使用双%%的查询条件 如 a like &apos;%1323%&apos;
+    2.一个sql只能利用到复合索引中的一列进行范围查询
+    有 a,b,c列的联合索引，在查询条件中有a列的范围查询，则在b,c列上的索引将不会被用到，
+    在定义联合索引时，如果a列要用到范围查找的话，就要把a列放到联合索引的右侧
+    3.使用left join 或者not exists 来优化not in（偶尔也会导致索引失效） 操作 
+
+ 4.程序链接不同数据库要使用不同的账号，禁止跨库连接为迁移和分库分表做预备
+
+ 5.禁止select * 必须使用select &lt;字段列表&gt; （* 无法覆盖索引  减少表结构变更 对程序带来的影响）
+
+ 6.insert 明确字段列表
+
+ 7.禁止使用子查询，可以把子查询优化为join操作
+    子查询结果集无法使用索引
+    子查询会产生临时表操作，如果子查询数据量大则会更严重
+
+ 8.避免使用过多的join 关联表
+   于Mysql来说，是存在关联缓存的，缓存的大小可以由join_buffer_size参数进行设置
+   在Mysql中，对于同一个SQL多关联（join）一个表，就会多分配一个关联缓存，如果在一个SQL中关联的表越多，
+   所占用的内存也就越大
+   如果程序中大量的使用了多表关联的操作，同时join_buffer_size设置的也不合理的情况下，就容易造成服务器内存溢出的情况，
+   就会影响到服务器数据库性能的稳定性
+   同时对于关联操作来说，会产生临时表操作，影响查询效率
+   Mysql最多允许关联61个表，建议不超过5个    
+
+  9.减少同数据库的交互次数 多个相同的操作合并在一起
+
+  10.对应同一列进行or判断时，使用in代替or
+
+    in 的值不要超过500个
+    in 操作可以更有效的利用索引，or大多数情况下很少能利用到索引
+
+  11.禁止order by rand() 进行随机排序
+
+  会把表中所有符合条件的数据装载到内存中，然后在内存中对所有数据根据随机生成的值进行排序
+  并且可能会对每一行都生成一个随机值，如果满足条件的数据集非常大，就会消耗大量的CPU和IO及内存资源
+  推荐在程序中获取一个随机值，然后从数据库中获取数据的方式       
+
+  12.where 从句禁止对列进行函数转换和计算(导致无法使用相关列的索引)
+
+  SELECT（错误写法）
+      * 
+  FROM
+      miaosha_message 
+  WHERE
+      create_time &gt;= &apos;20190101&apos; 
+      AND create_time &lt; &apos;20190102&apos;
+
+  SELECT （正确写法）
+        * 
+    FROM
+        miaosha_message 
+    WHERE
+        date
+        (create_time) = &apos;20190101&apos; 
+
+   13.不会有重复值时使用UNION ALL 而不是UNION
+      UNION 会把两个结果集的所有数据放到临时表中后再进行去重操作
+      UNION ALL 不会再对结果集进行去重操作
+
+   14.拆分大sql变为小sql
+   大SQL:逻辑上比较复杂，需要占用大量CPU进行计算的SQL
+   MySQL 一个SQL只能使用一个CPU进行计算
+   SQL拆分后可以通过并行执行来提高处理效率
 
 
+  数据库操作行为规范
 
-面向缓存区
-面向流
+  过大数据的（100万）批量写操作要分批多次操作
+   1.大批量操作可能会导致严重的主从延迟
+   2. binlog日志为row格式时会产生大量的日志
+   大批量写操作会产生大量日志，特别是对于row格式二进制数据而言，由于在row格式中会记录每一行数据的修改，我们一次修改的数据越多，
+   产生的日志量也就会越多，日志的传输和恢复所需要的时间也就越长，这也是造成主从延迟的一个原因
+   3. 避免产生大事务操作
+   大批量修改数据，一定是在一个事务中进行的，这就会造成表中大批量数据进行锁定，从而导致大量的阻塞，阻塞会对MySQL的性能产生非常大的影响
+   特别是长时间的阻塞会占满所有数据库的可用连接，这会使生产环境中的其他应用无法连接到数据库，因此一定要注意大批量写操作要进行分批
+   4.对于大表的修改使用pt-online-schema-change
+    1.原理： 会在原表的结构上建造一个新表 复制数据 
+    2.避免延迟，修改时锁表
+   5.禁止super权限滥用
+   6.数据账号连接最小</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-非阻塞IO
-阻塞IO
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/netty/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/netty/" itemprop="url">netty</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Netty-教程"><a href="#Netty-教程" class="headerlink" title="Netty 教程"></a>Netty 教程</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>####了解NIO和IO</p>
+<table>
+<thead>
+<tr>
+<th align="center">NIO</th>
+<th align="center">IO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">面向缓存区</td>
+<td align="center">面向流</td>
+</tr>
+<tr>
+<td align="center">非阻塞IO</td>
+<td align="center">阻塞IO</td>
+</tr>
+<tr>
+<td align="center">选择器</td>
+<td align="center">无</td>
+</tr>
+</tbody></table>
+<p>#####面向缓存区和面向流<br>    Java NIO和IO之间的第一差异在于IO是面向流的，其中NIO是面向缓冲的。</p>
+<pre><code>面向流的Java IO意味着您一次从流中读取一个或多个字节。你读取的字节取决于你所做的。
+他们没有任何缓存空间。此外，你不能向前或向后移动流中的数据。如果您需要在从流中读取的数据中前后移动，则需要首先将其缓存在缓冲区中。
+
+Java NIO的缓存导向方法略有不同。数据先被读入缓存区然后再被处理。您可以根据需要在缓冲区中向前后移动。
+这样可以在处理过程中给予您更多的灵活性。但是，您还需要检查缓冲区是否包含所有需要的数据，以便完全处理它。
+而且，您需要确保在缓冲区中读取更多数据时，不要覆盖尚未处理的在缓冲区中的数据。 </code></pre><p>#####非阻塞IO和阻塞IO</p>
+<pre><code>Java IO的各种流是阻塞的。
+这意味着，当一个线程调用read() 或 write()时，该线程被阻塞，直到有一些数据被读取，或数据完全写入。该线程在此期间不能再干任何事情了。
+
+Java NIO的非阻塞模式，使一个线程从某通道发送请求读取数据，但是它仅能得到目前可用的数据，如果目前没有数据可用时，就什么都不会获取，而不是保持线程阻塞，所以直至数据变的可以读取之前，该线程可以继续做其他的事情。 非阻塞写也是如此。
+一个线程请求写入一些数据到某通道，但不需要等待它完全写入，这个线程同时可以去做别的事情。 线程通常将非阻塞IO的空闲时间用于在其它通道上执行IO操作，所以一个单独的线程现在可以管理多个输入和输出通道（channel）。</code></pre><p>######选择器<br>    Java NIO的选择器允许单个线程监视多个通道的输入。您可以使用选择器注册多个通道，然后使用单个线程“选择”具有可用于处理的输入的通道，或选择准备好进行写入的通道。这种选择器机制使单线程更容易管理多个通道。</p>
+<p>####IO编程<br>我们简化下场景：客户端每隔两秒发送一个带有时间戳的”hello world”给服务端，服务端收到之后打印。<br>为了方便演示，下面例子中，服务端和客户端各一个类，把这两个类拷贝到你的IDE中，先后运行 IOServer.java 和IOClient.java可看到效果。<br>下面是传统的IO编程中服务端实现</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        ServerSocket serverSocket = <span class="keyword">new</span> ServerSocket(<span class="number">8000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// (1) 接收新连接线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="comment">// (1) 阻塞方法获取新的连接</span></span><br><span class="line">                    Socket socket = serverSocket.accept();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// (2) 每一个新的连接都创建一个线程，负责读取数据</span></span><br><span class="line">                    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">byte</span>[] data = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">                            InputStream inputStream = socket.getInputStream();</span><br><span class="line">                            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                                <span class="keyword">int</span> len;</span><br><span class="line">                                <span class="comment">// (3) 按字节流方式读取数据</span></span><br><span class="line">                                <span class="keyword">while</span> ((len = inputStream.read(data)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                                    System.out.println(<span class="keyword">new</span> String(data, <span class="number">0</span>, len));</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;).start();</span><br><span class="line"></span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//server端首先创建了一个serverSocket来监听8000端口。</span></span><br><span class="line"><span class="comment">//然后创建一个线程，线程里面不断调用阻塞方法 serversocket.accept();获取新的连接，见(1)，当获取到新的连接之后，给每条连接创建一个新的线程，这个线程负责从该连接中读取数据，见(2)，然后读取数据是以字节流的方式，见(3)。</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOClient</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Socket socket = <span class="keyword">new</span> Socket(<span class="string">"127.0.0.1"</span>, <span class="number">8000</span>);</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        socket.getOutputStream().write((<span class="keyword">new</span> Date() + <span class="string">": hello world"</span>).getBytes());</span><br><span class="line">                        socket.getOutputStream().flush();</span><br><span class="line">                        Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//客户端的代码相对简单，连接上服务端8000端口之后，每隔2秒，我们向服务端写一个带有时间戳的 "hello world"</span></span><br></pre></td></tr></table></figure></div>
+<p>上面的demo，从服务端代码中我们可以看到，在传统的IO模型中，每个连接创建成功之后都需要一个线程来维护，每个线程包含一个while死循环，那么1w个连接对应1w个线程，继而1w个while死循环，这就带来如下几个问题：</p>
+<p>线程资源受限：线程是操作系统中非常宝贵的资源，同一时刻有大量的线程处于阻塞状态是非常严重的资源浪费，操作系统耗不起<br>线程切换效率低下：单机cpu核数固定，线程爆炸之后操作系统频繁进行线程切换，应用性能急剧下降。<br>除了以上两个问题，IO编程中，我们看到数据读写是以字节流为单位，效率不高。</p>
+<p>为了解决这三个问题，JDK在1.4之后提出了NIO<br>####NIO编程<br>    关于NIO相关的文章网上也有很多，这里不打算详细深入分析，下面简单描述一下NIO是如何解决以上三个问题的。</p>
+<p>#####线程资源受限<br>    在NIO模型中，他把这么多while死循环变成一个死循环，这个死循环由一个线程控制，那么他又是如何做到一个线程，一个while死循环就能监测1w个连接是否有数据可读的呢？<br>    这就是NIO模型中selector的作用，一条连接来了之后，现在不创建一个while死循环去监听是否有数据可读了，而是直接把这条连接注册到selector上，然后，通过检查这个selector，就可以批量监测出有数据可读的连接，进而读取数据，<br>#####线程切换效率低下<br>    由于NIO模型中线程数量大大降低，线程切换效率因此也大幅度提高<br>#####IO读写以字节为单位<br>    NIO解决这个问题的方式是数据读写不再以字节为单位，而是以字节块为单位。IO模型中，每次都是从操作系统底层一个字节一个字节地读取数据，而NIO维护一个缓冲区，每次可以从这个缓冲区里面读取一块的数据，<br>    这就好比一盘美味的豆子放在你面前，你用筷子一个个夹（每次一个），肯定不如要勺子挖着吃（每次一批）效率来得高。</p>
+<p>介绍完IO/NIO我们来真正介绍Netty吧</p>
+<p>####了解什么是Netty</p>
+<ul>
+<li><p>Netty的官方解释</p>
+<p>Netty是由JBOSS提供的一个java开源框架。<br>Netty提供异步的、事件驱动的网络应用程序框架和工具，用以快速开发高性能、高可靠性的网络服务器和客户端程序。</p>
+</li>
+<li><p>Netty的简单概括</p>
+<p>Netty是一款基于NIO（Nonblocking I/O，非阻塞IO）开发的网络通信框架。</p>
+</li>
+</ul>
+<p>####Netty的特性呢</p>
+<blockquote>
+<p>1.统一的API，支持多种传输类型，阻塞的和非阻塞的简单而强大的线程模型真正的无连接数据报套接字支持链接逻辑组件以支持复用。</p>
+</blockquote>
+<blockquote>
+<p>2.拥有比Java的核心API更高的吞吐量以及更低的延迟得益于池化和复用，拥有更低的资源消耗最少的内存复制。</p>
+</blockquote>
+<blockquote>
+<p>3.不会因为慢速、快速或者超载的连接而导致OutOfMemoryError消除在高速网络中NIO应用程序常见的不公平读/写比率。</p>
+</blockquote>
+<blockquote>
+<p>4.完整的SSL/TLS以及StartTLS支持可用于受限环境下，如Applet和OSGI。</p>
+</blockquote>
+<blockquote>
+<p>等等。</p>
+</blockquote>
+<p>好 让我们动手写一个Netty客户端和服务端吧<br>####Netty客户端</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.netty.buffer.Unpooled;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandlerContext;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.SimpleChannelInboundHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.*;</span><br><span class="line"><span class="keyword">import</span> io.netty.util.AsciiString;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpHandler</span> <span class="keyword">extends</span> <span class="title">SimpleChannelInboundHandler</span>&lt;<span class="title">FullHttpRequest</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> AsciiString contentType = HttpHeaderValues.TEXT_PLAIN;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">channelRead0</span><span class="params">(ChannelHandlerContext ctx, FullHttpRequest msg)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"class:"</span> + msg.getClass().getName());</span><br><span class="line">        DefaultFullHttpResponse response = <span class="keyword">new</span> DefaultFullHttpResponse(HttpVersion.HTTP_1_1,</span><br><span class="line">                HttpResponseStatus.OK,</span><br><span class="line">                Unpooled.wrappedBuffer(<span class="string">"test"</span>.getBytes())); </span><br><span class="line"></span><br><span class="line">        HttpHeaders heads = response.headers();</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_TYPE, contentType + <span class="string">"; charset=UTF-8"</span>);</span><br><span class="line">        heads.add(HttpHeaderNames.CONTENT_LENGTH, response.content().readableBytes()); <span class="comment">// 3</span></span><br><span class="line">        heads.add(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);</span><br><span class="line"></span><br><span class="line">        ctx.write(response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelReadComplete</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"channelReadComplete"</span>);</span><br><span class="line">        <span class="keyword">super</span>.channelReadComplete(ctx);</span><br><span class="line">        ctx.flush(); <span class="comment">// 4</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exceptionCaught</span><span class="params">(ChannelHandlerContext ctx, Throwable cause)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"exceptionCaught"</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != cause) cause.printStackTrace();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != ctx) ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>####Netty服务端</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">java</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.example.netty.http;</span><br><span class="line"><span class="keyword">import</span> io.netty.bootstrap.ServerBootstrap;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelHandler;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.ChannelInitializer;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.nio.NioEventLoopGroup;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.sctp.nio.NioSctpServerChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.SocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.channel.socket.nio.NioServerSocketChannel;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpObjectAggregator;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpRequestDecoder;</span><br><span class="line"><span class="keyword">import</span> io.netty.handler.codec.http.HttpResponseEncoder;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpServer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span>  <span class="keyword">int</span> port ;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpServer</span><span class="params">(<span class="keyword">int</span> port)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.port = port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ServerBootstrap bootStrap = <span class="keyword">new</span> ServerBootstrap();</span><br><span class="line">        NioEventLoopGroup group = <span class="keyword">new</span> NioEventLoopGroup();</span><br><span class="line">        bootStrap.group(group).channel(NioServerSocketChannel<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">                .<span class="title">childHandler</span>(<span class="title">new</span> <span class="title">ChannelInitializer</span>&lt;<span class="title">SocketChannel</span>&gt;() </span>&#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                        System.out.println(<span class="string">"channel :"</span> +ch);</span><br><span class="line">                        ch.pipeline().addLast(<span class="string">"decoder"</span>, <span class="keyword">new</span> HttpRequestDecoder())</span><br><span class="line">                                .addLast(<span class="string">"encoder"</span>, <span class="keyword">new</span> HttpResponseEncoder())  <span class="comment">// 2</span></span><br><span class="line">                                .addLast(<span class="string">"aggregator"</span>, <span class="keyword">new</span> HttpObjectAggregator(<span class="number">512</span> * <span class="number">1024</span>))    <span class="comment">// 3</span></span><br><span class="line">                                .addLast(<span class="string">"handler"</span>,  <span class="keyword">new</span> HttpHandler());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (args.length != <span class="number">1</span>) &#123;</span><br><span class="line">            System.err.println(</span><br><span class="line">                    <span class="string">"Usage: "</span> + HttpServer<span class="class">.<span class="keyword">class</span>.<span class="title">getSimpleName</span>() +</span></span><br><span class="line">                            " &lt;port&gt;");</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> port = Integer.parseInt(args[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">new</span> HttpServer(port).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//To be continued！</span></span><br></pre></td></tr></table></figure></div>
+<p>####参考文档<br><a href="https://www.jianshu.com/p/a4e03835921a" target="_blank" rel="noopener">Netty是什么?</a></p>
+<p>To be continued!!!!</p>
+<p>To be continued!!!!</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-选择器
-无
+    
+      
 
+  
 
-#####面向缓存区和面向流    Java NIO和IO之间的第一差异在于IO是面向流的，其中NIO是面向缓冲的。 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover right_radius"><a href="/2020/01/17/ngnix-good/" title="ngnix-good"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ngnix-good"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/ngnix-good/" title="ngnix-good">ngnix-good</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">秒杀nginx优化有问题或者宝贵意见联系我的QQ,非常希望你的加入！##要求：
+  
+  
+  
 
-目标
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/ngnix-good/">
 
-1.并发优化
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/ngnix-good/" itemprop="url">ngnix-good</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="秒杀nginx优化"><a href="#秒杀nginx优化" class="headerlink" title="秒杀nginx优化"></a>秒杀nginx优化</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
+<blockquote>
+<p>目标</p>
+</blockquote>
+<pre><code>1.并发优化
 2.KeepALive长连接优化
 3.压缩优化
-4.配置缓存/docs/tools/nginx nginx优化相关包安装：cd
+4.配置缓存</code></pre><h4 id="docs-tools-nginx-nginx优化相关包"><a href="#docs-tools-nginx-nginx优化相关包" class="headerlink" title="/docs/tools/nginx nginx优化相关包"></a><a href="/docs/tools">/docs/tools/nginx nginx优化相关包</a></h4><pre><code>安装：cd
 yum install -y gcc gcc-c++
-./confi ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover left_radius"><a href="/2020/01/17/redis-good/" title="redis-good"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="redis-good"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/redis-good/" title="redis-good">redis-good</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">redis 使用与进阶有问题或者宝贵意见联系我的QQ,非常希望你的加入！
-目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）
+./configure --prefix=/usr/local/nginx --with-pcre=/home/qiurunze/下载/pcre-8.38 --with-http_stub_status_module --with-http_gzip_static_module --add-module=/home/qiurunze/下载/ngx_cache_purge-2.3
+make
+make install
 
-1.redis分布式锁,zk分布式锁,lua脚本限流,lua分布式锁
+ ps -ef | grep nginx
+
+./sbin/nginx -s reload
+
+http://nginx.org/en/docs/
+
+1.工作线程数和并发连接数
+worker_processes 4; #cpu，如果nginx单独在一台机器上
+worker_processes auto;
+events {
+    worker_connections 4096;#每一个进程打开的最大连接数，超出了log中会有记录
+    multi_accept on; #可以一次建立多个连接
+    use epoll;
+}
+worker_rlimit_nofile 10240;每个进程打开的最大的文件数，受限于操作系统：
+vi /etc/security/limits.conf
+* hard nofile 102400
+* soft nofile 102400
+* soft core unlimited
+* soft stack 10240
+
+2.操作系统优化
+配置文件/etc/sysctl.conf
+sysctl -w net.ipv4.tcp_syncookies=1#防止一个套接字在有过多试图连接到达时引起过载
+sysctl-w net.core.somaxconn=1024#默认128，连接队列
+sysctl-w net.ipv4.tcp_fin_timeout=10 # timewait的超时时间
+sysctl -w net.ipv4.tcp_tw_reuse=1 #os直接使用timewait的连接
+sysctl -w net.ipv4.tcp_tw_recycle = 0 #回收禁用
+
+3.Keepalive长连接
+Nginx与upstream server：
+upstream server_pool{
+        server localhost:8080 weight=1 max_fails=2 fail_timeout=30s;
+        keepalive 300;  #300个长连接
+}
+同时要在location中设置：
+location /  {
+            proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection &quot;upgrade&quot;;
+}
+客户端与nginx（默认是打开的）：
+
+
+4.keepalive_timeout  60s; #长连接的超时时间
+keepalive_requests 100; #100个请求之后就关闭连接，可以调大
+keepalive_disable msie6; #ie6禁用启用压缩
+gzip on;
+gzip_disable &quot;MSIE [1-6]\.(?!.*SV1)&quot;;
+gzip_proxied any;
+gzip_types text/html text/plain application/x-javascript application/javascript text/css application/xml
+gzip_vary on; #Vary: Accept-Encoding
+gzip_static on; #如果有压缩好的 直接使用
+
+
+
+5.状态监控
+location = /nginx_status {
+    stub_status on;
+    access_log off;
+    allow &lt;YOURIPADDRESS&gt;;
+    deny all;
+}
+输出结果：
+Active connections: 1 
+server accepts handled requests
+ 17122 17122 34873 
+Reading: 0 Writing: 1 Waiting: 0 
+Active connections：当前实时的并发连接数
+accepts：收到的总连接数，
+handled：处理的总连接数
+requests：处理的总请求数
+Reading：当前有都少个读，读取客户端的请求
+Writing：当前有多少个写，向客户端输出
+Waiting：当前有多少个长连接（reading + writing）
+reading – nginx reads request header
+writing – nginx reads request body, processes request, or writes response to a client
+waiting – keep-alive connections, actually it is active - (reading + writing)
+
+6.实时请求信息统计ngxtop
+https://github.com/lebinh/ngxtop
+(1)安装python-pip
+yum install epel-release
+yum install python-pip
+(2)安装ngxtop
+pip install ngxtop
+(3)使用
+指定配置文件：           ngxtop -c ./conf/nginx.conf
+查询状态是200：        ngxtop -c ./conf/nginx.conf  --filter &apos;status == 200&apos;
+查询那个ip访问最多： ngxtop -c ./conf/nginx.conf  --group-by remote_addr
+
+-----------------------------------------------------------------------------
+nginx.conf配置文件 
+user  www;
+worker_processes  4;#取决于cpu
+
+error_log  logs/error.log;
+
+pid        logs/nginx.pid;
+
+worker_rlimit_nofile 10240; #每个进程打开的最大的文件数，受限于操作系统/etc/security/limits.conf
+
+events {
+    worker_connections 10240;#每一个进程打开的最大连接数，超出了log中会有记录
+    multi_accept on; #可以一次建立多个连接
+    use epoll;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    server_tokens off; #隐藏版本号
+    client_max_body_size 10m; #文件上传需要调大
+
+    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;
+
+    access_log  logs/access.log  main;
+    #默认写日志：打开文件写入关闭，max:缓存的文件描述符数量，inactive缓存时间，valid：检查时间间隔，min_uses：在inactive时间段内使用了多少次加入缓存
+    open_log_file_cache max=200 inactive=20s valid=1m min_uses=2;
+
+    sendfile       on;
+    tcp_nopush     on;
+    #与浏览器的长连接
+    keepalive_timeout  65;#长连接超时时间
+    keepalive_requests 500;#500个请求以后，关闭长连接
+    keepalive_disable msie6;
+    # 启用压缩
+    gzip on;
+    gzip_disable &quot;MSIE [1-6]\.(?!.*SV1)&quot;;
+    gzip_proxied any;
+    gzip_types text/plain application/x-javascript application/javascript text/css application/xml;
+    gzip_vary on; #Vary: Accept-Encoding
+    gzip_static on; #如果有压缩好的 直接使用
+    #超时时间
+    proxy_connect_timeout 5; #连接proxy超时
+    proxy_send_timeout 5; # proxy连接nginx超时
+    proxy_read_timeout 60;# proxy响应超时
+     # 开启缓存,2级目录
+    proxy_cache_path /usr/local/nginx/proxy_cache levels=1:2 keys_zone=cache_one:200m inactive=1d max_size=20g;
+    proxy_ignore_headers X-Accel-Expires Expires Cache-Control;
+    proxy_hide_header Cache-Control;
+    proxy_hide_header Pragma;
+
+    #反向代理服务器集群
+    upstream server_pool{
+        server localhost:8080 weight=1 max_fails=2 fail_timeout=30s;
+        server localhost:8081 weight=1 max_fails=2 fail_timeout=30s; 
+        keepalive 200; # 最大的空闲的长连接数 
+    }
+
+    server {
+        listen       80;
+        server_name  localhost 192.168.220.133;
+
+        location / {
+            #长连接
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection &quot;upgrade&quot;;
+            #Tomcat获取真实用户ip
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $remote_addr;
+            proxy_set_header X-Forwarded-Proto  $scheme;
+            proxy_pass http://server_pool;
+        }
+        # 状态监控
+        location /nginx_status {
+            stub_status on;
+            access_log   off;
+            allow 127.0.0.1;
+            allow 192.168.220.133;
+            deny all;
+        }
+        #用于清除缓存
+        location ~ /purge(/.*)
+        {
+            allow 127.0.0.1;
+            allow 192.168.220.133;
+            deny all;
+            proxy_cache_purge cache_one $host$1$is_args$args;
+        }
+        # 静态文件加缓存
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|js|css|html|htm)?$
+        {
+            expires 1d;
+            proxy_cache cache_one;
+            proxy_cache_valid 200 304 1d;
+            proxy_cache_valid any 1m;
+            proxy_cache_key $host$uri$is_args$args;
+            proxy_pass http://server_pool;
+        }
+    }
+}</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/redis-good/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/redis-good/" itemprop="url">redis-good</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="redis-使用与进阶"><a href="#redis-使用与进阶" class="headerlink" title="redis 使用与进阶"></a>redis 使用与进阶</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+<p>目标 （希望大家仔细研究redis.conf配置文件-本文很多基础的一带而过）</p>
+</blockquote>
+<pre><code>1.redis分布式锁,zk分布式锁,lua脚本限流,lua分布式锁
 2.redis持久化策略
 3.redis集群
 4.redis的简单操练
-整 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover right_radius"><a href="/2020/01/17/redis-lua/" title="redis-lua"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="redis-lua"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/redis-lua/" title="redis-lua">redis-lua</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">lua学习有问题或者宝贵意见联系我的QQ,非常希望你的加入！
-数据类型
+整理大部分常用的场景与使用,如果有疑问或者你不懂的地方请联系我！</code></pre><h4 id="1-redis分布式锁"><a href="#1-redis分布式锁" class="headerlink" title="1 redis分布式锁"></a>1 redis分布式锁</h4><blockquote>
+<p>1.分布式系统（单机的使用ReentrantLock或者synchronized代码块来实现）<br>2.共享资源大并发产生<br>3.同步访问</p>
+</blockquote>
+<p> <strong>redis分布式锁解决什么问题</strong></p>
+<pre><code>1.一个进程中的多个线程,多个线程并发访问同一个资源的时候,如何解决线程安全问题。
+2.一个分布式架构系统中的两个模块同时去访问一个文件对文件进行读写操作
+3.多个应用对同一条数据做修改的时候,如何保证数据的安全性
+在但一个进程中,我们可以用到synchronized、lock之类的同步操作去解决,但是对于分布式架构下多进程的情况下,
+如何做到跨进程的锁。就需要借助一些第三方手段来完成</code></pre><p> <strong>设计一个分布式所需要解决的问题,分布式锁解决方案（数据库方案）</strong></p>
+<pre><code>数据库解决方式,创建一个表叫做LOCK表
+lock(
+  id  int(11)
+  methodName  varchar(100),--锁定的方法名称
+  memo varchar(1000) 
+  modifyTime timestamp
+  unique key mn (method)  --唯一约束
+)
 
-</div></div></div><div class="recent-post-item article-container"><div class="post_cover left_radius"><a href="/2020/01/17/tomcat-good/" title="tomcat-good"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="tomcat-good"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/tomcat-good/" title="tomcat-good">tomcat-good</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">xiu修改### 秒杀tomcat优化 
-有问题或者宝贵意见联系我的QQ,非常希望你的加入！##要求：
+在执行方法的时候,获取锁的伪代码 或者for update行锁 或者 乐观锁方式也是可以的
+try{
+exec  insert into lock(methodName,memo) values(‘method’,’desc’);
+return true;
+}Catch(DuplicateException e){
+return false;
+}
 
-本文以tomcat8.5.20为准目标
+释放锁：
+delete from lock where methodName=’’; </code></pre><p>  <strong>（数据库方案）存在的问题以及思考</strong></p>
+<pre><code>1.锁没有失效时间,一旦解锁操作失败,就会导致锁记录一直在数据库中,其他线程无法再获得到锁
+2.锁是非阻塞的,数据的insert操作,一旦插入失败就会直接报错。没有获得锁的线程并不会进入排队队列
+  要想再次获得锁就要再次触发获得锁操作
+3.锁是非重入的,同一个线程在没有释放锁之前无法再次获得该锁</code></pre><p>  <strong>ZK方案</strong></p>
+<pre><code>ZK方案实现之前你要先了解ZK关于他的节点的几个特性：
 
-1.内存优化
+有序节点：假如当前有一个父节点为/lock,我们可以在这个父节点下面创建子节点；zookeeper提供了一个可选的有序特性
+例如我们可以创建子节点“/lock/node-”并且指明有序,那么zookeeper在生成子节点时会根据当前的子节点数量自动添加整数序号
+也就是说如果是第一个创建的子节点,那么生成的子节点为/lock/node-0000000000,下一个节点则为/lock/node-0000000001,依次类推
+
+临时节点：客户端可以建立一个临时节点,在会话结束或者会话超时后,zookeeper会自动删除该节点
+
+事件监听：在读取数据时,我们可以同时对节点设置事件监听,当节点数据或结构变化时,zookeeper会通知客户端
+当前zookeeper有如下四种事件：
+1）节点创建
+2）节点删除
+3）节点数据修改
+4）子节点变更
+
+获取分布式锁的流程  ------- 假设所空间的根节点为/lock
+
+1.客户端连接zookeeper,并在/lock下创建临时的且有序的子节点
+第一个客户端对应的子节点为/lock/lock-0000000000,第二个为/lock/lock-0000000001,以此类推
+
+2.--避免羊群效应--客户端获取/lock下的子节点列表,判断自己创建的子节点是否为当前子节点列表中序号最小的子节点,
+如果是则认为获得锁,否则监听刚好在自己之前一位的子节点删除消息,获得子节点变更通知后重复此步骤直至获得锁
+
+3.实行业务代码
+
+4.流程完成后,删除对应的子节点并释放锁  （Watch机制）
+对应分布式开源包Curator</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/zk.png" class="lazyload"></a></p>
+<p>   <strong>Redis分布式锁方案</strong></p>
+<pre><code>Redis 中有许多的命令都可以实现分布式锁,但是比较常用的是SETNX这个命令来实现
+有多种方案代码：
+1.获取锁,释放锁 代码在redismanager 里面 （简单版）</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock1.png" class="lazyload"></a></p>
+<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock2.png" class="lazyload"></a></p>
+<pre><code>closeOrder也有 不过是另一种！比较复杂！！
+加入时间对比如果当前时间已经大与释放锁的时间
+说明已经可以释放这个锁重新在获取锁,setget方法可以把之前的锁去掉在重新获取,旧值在于之前的
+值比较,如果无变化说明这个期间没有人获取或者操作这个redis锁,则可以重新获取</code></pre><p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/redislock3.png" class="lazyload"></a></p>
+<pre><code>redis有成熟的框架redission</code></pre><p>   <strong>Redis多路复用机制（看不看都行）</strong></p>
+<pre><code>linux的内核会把所有外部设备都看作一个文件来操作,对一个文件的读写操作会调用内核提供的系统命令,
+返回一个 file descriptor（文件描述符）。对于一个socket的读写也会有响应的描述符,称为socketfd(socket 描述符)。
+而IO多路复用是指内核一旦发现进程指定的一个或者多个文件描述符IO条件准备好以后就通知该进程
+IO多路复用又称为事件驱动,操作系统提供了一个功能,当某个socket可读或者可写的时候,它会给一个通知。
+当配合非阻塞socket使用时,只有当系统通知我哪个描述符可读了,我才去执行read操作,可以保证每次read都能读到有效数据。
+操作系统的功能通过select/pool/epoll/kqueue之类的系统调用函数来使用,这些函数可以同时监视多个描述符的读写就绪情况
+,这样多个描述符的I/O操作都能在一个线程内并发交替完成,这就叫I/O多路复用,这里的复用指的是同一个线程
+多路复用的优势在于用户可以在一个线程内同时处理多个socket的 io请求。达到同一个线程同时处理多个IO请求的目的。
+而在同步阻塞模型中,必须通过多线程的方式才能达到目的</code></pre><p>   <strong>Redis（2.6以后）–lua脚本</strong></p>
+<pre><code>1.减少网络开销,在Lua脚本中可以把多个命令放在同一个脚本中运行
+2.原子操作,redis会将整个脚本作为一个整体执行,中间不会被其他命令插入。换句话说,编写脚本的过程中无需担心会出现竞态条件
+3.复用性,客户端发送的脚本会永远存储在redis中,这意味着其他客户端可以复用这一脚本来完成同样的逻辑 
+4.脚本可以通过return 来返回客户端  
+例子： 利用lua脚本进行电话号或则IP限流 实例 具体请看 redislua类
+KEYS[1] ARGV[1] ARGV[2]  key 参数1  参数2 
+local num=redis.call(&apos;incr&apos;,KEYS[1])
+if tonumber(num)==1 then
+   redis.call(&apos;expire&apos;,KEYS[1],ARGV[1])
+   return 1
+elseif tonumber(num)&gt;tonumber(ARGV[2]) then
+   return 0
+else
+   return 1
+end</code></pre><p>   <strong>Redis（2.6以后）–lua–EVALSHA命令</strong></p>
+<pre><code>考虑到我们通过eval执行lua脚本,脚本比较长的情况下,每次调用脚本都需要把整个脚本传给redis
+比较占用带宽。为了解决这个问题,redis提供了EVALSHA命令允许开发者通过脚本内容的SHA1摘要来执行脚本。该命令的用法和EVAL一样,
+只不过是将脚本内容替换成脚本内容的SHA1摘要
+1. Redis在执行EVAL命令时会计算脚本的SHA1摘要并记录在脚本缓存中
+2. 执行EVALSHA命令时Redis会根据提供的摘要从脚本缓存中查找对应的脚本内容
+如果找到了就执行脚本,否则返回“NOSCRIPT No matching script,Please use EVAL”</code></pre><p>   <strong>Redis（2.6以后）–lua脚本运行限制</strong></p>
+<pre><code>redis的脚本执行是原子的,即脚本执行期间Redis不会执行其他命令
+所有的命令必须等待脚本执行完以后才能执行。为了防止某个脚本执行时间过程导致Redis无法提供服务
+Redis提供了lua-time-limit参数限制脚本的最长运行时间--默认是5秒钟
+当脚本运行时间超过这个限制后,Redis将开始接受其他命令但不会执行（以确保脚本的原子性）,而是返回BUSY的错误
+
+在第一个窗口中执行lua脚本的死循环
+eval “while true do end” 0 在第二个窗口中运行get hello    
+最后第二个窗口的运行结果是Busy, 可以通过script kill命令终止正在执行的脚本
+如果当前执行的lua脚本对redis的数据进行了修改,比如（set）操作,那么script kill命令没办法终止脚本的运行,
+因为要保证lua脚本的原子性。如果执行一部分终止了,就违背了这一个原则
+在这种情况下,只能通过 shutdown nosave命令强行终止</code></pre><p>   <strong>Redis（2.6以后）–lua分布式锁</strong></p>
+<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualock.png" class="lazyload"></a></p>
+<p>   <strong>如何利用lua + redis  取代 nigix + lua 脚本进行分布式限流</strong></p>
+<p>   分布式限流的关键就是把限流做成具有原子性的功能，可以使用redis + lua 来进行技术实现，高并发和高性能，实现时间窗口内的流量控制<br>   操作在lua脚本中又因为redis是单线程的，因此线程安全！Redis 将整个脚本作为一个原子执行, 无需担心并发, 也就无需事务;</p>
+<p>   <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit1.png" class="lazyload"></a></p>
+<p>  <a href="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="整体流程" class="fancybox"><img alt="整体流程" title="整体流程" data-src="https://raw.githubusercontent.com/qiurunze123/imageall/master/lualimit2.png" class="lazyload"></a></p>
+<p>   lua脚本一致存在于redis 中可以 限制每秒钟的请求数实现限流！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/redis-lua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/redis-lua/" itemprop="url">redis-lua</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="lua学习"><a href="#lua学习" class="headerlink" title="lua学习"></a>lua学习</h3><pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><blockquote>
+<p>数据类型</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/tomcat-good/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/tomcat-good/" itemprop="url">tomcat-good</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>xiu修改### 秒杀tomcat优化 </p>
+<pre><code>有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：</p>
+<blockquote>
+<p>本文以tomcat8.5.20为准<br>目标</p>
+</blockquote>
+<pre><code>1.内存优化
 2.并发优化
-3.APR优化APR优化相关包1.内存优化
-内存优化catalina
-JAVA_OPTS=&quot;-server -Xm ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover right_radius"><a href="/2020/01/17/code-criterion/" title="code-criterion"><img class="post_bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="code-criterion"></a></div><div class="recent-post-info">  <a class="article-title" href="/2020/01/17/code-criterion/" title="code-criterion">code-criterion</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><div class="content">代码规范老司机一般的规范大家都知道类似驼峰,匹配一类的大家都知道具体则不再提
-有问题或者宝贵意见联系我的QQ,非常希望你的加入！##要求：1.lombook– idea插件请大家下载 ,去除setget构造方法等,阿里巴巴代码规范插件请自行下载2.尽量将长的类名，方法名，变量名精简
-1.长的类名会使 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fa fa-fw fa-chevron-left" aria-hidden="true"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-fw fa-chevron-right" aria-hidden="true"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">26</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="Add to bookmark" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>Add to bookmark</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jerryc127" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:xxxxxxxx@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>Announcement</span></div><div class="announcement_content">感謝訪問本站，若喜歡請收藏 ^_^</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>Recent Post</span></div><div class="aside-recent-item"> <div class="aside-recent-post"><a href="/2020/01/17/code-rpc/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="code-rpc" alt="code-rpc"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/01/17/code-rpc/" title="code-rpc">code-rpc</div><time class="aside-post_meta post-meta__date">2020-01-17</time></div></a></div><div class="aside-recent-post"><a href="/2020/01/17/code-solve/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="code-solve" alt="code-solve"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/01/17/code-solve/" title="code-solve">code-solve</div><time class="aside-post_meta post-meta__date">2020-01-17</time></div></a></div><div class="aside-recent-post"><a href="/2020/01/17/dubbo-admin/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="dubbo-admin" alt="dubbo-admin"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/01/17/dubbo-admin/" title="dubbo-admin">dubbo-admin</div><time class="aside-post_meta post-meta__date">2020-01-17</time></div></a></div><div class="aside-recent-post"><a href="/2020/01/17/fenbushi-tcc/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="fenbushi-tcc" alt="fenbushi-tcc"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/01/17/fenbushi-tcc/" title="fenbushi-tcc">fenbushi-tcc</div><time class="aside-post_meta post-meta__date">2020-01-17</time></div></a></div><div class="aside-recent-post"><a href="/2020/01/17/fenbushi/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="fenbushi" alt="fenbushi"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/01/17/fenbushi/" title="fenbushi">fenbushi</div><time class="aside-post_meta post-meta__date">2020-01-17</time></div></a></div></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>Archives</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/"><span class="archive-list-date">2020年01月</span><span class="archive-list-count">26</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">Article :</div><div class="webinfo-article-count">26</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">Run time :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="6/7/2018 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">UV :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">PV :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By John Doe</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var typed = new Typed(".subtitle", {
-strings: '今日事&#44;今日畢,Never put off till tomorrow what you can do today'.split(","),
-startDelay: 300,
-typeSpeed: 100,
-loop: true,
-backSpeed: 50
-});</script></body></html>
+3.APR优化</code></pre><h4 id="APR优化相关包"><a href="#APR优化相关包" class="headerlink" title="APR优化相关包"></a><a href="/docs/tools">APR优化相关包</a></h4><p>1.<strong>内存优化</strong></p>
+<pre><code>内存优化catalina
+JAVA_OPTS=&quot;-server -Xms2048M -Xmx2048M -XX:+HeapDumpOnOutOfMemoryError 
+-XX:HeapDumpPath=$CATALINA_HOME/logs/heap.dump&quot;
+# Register custom URL handlers
+server.xml 配置
+maxConnections=&quot;300&quot;
+acceptCount=&quot;200&quot;
+maxThreads=&quot;400&quot;
+minSpareThreads=&quot;200&quot;/&gt;
+禁用
+&lt;!-- Define an AJP 1.3 Connector on port 8009 
+&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;--&gt;
+
+${tomcat}/webapps/docs/config/host.html
+
+autoDeploy：This flag value indicates if Tomcat should check periodically for new or updated web applications while Tomcat is running
+
+${tomcat}/webapps/docs/config/http.html
+enableLookups：false
+
+${tomcat}/webapps/docs/config/context.html:
+reloadable：false</code></pre><p>2.<strong>如果你的网站具有高并发那么建议使用APR模式</strong></p>
+<pre><code>http://apr.apache.org/
+依赖：</code></pre><blockquote>
+<blockquote>
+<p>APR 1.2+ development headers (libapr1-dev package)<br>OpenSSL 1.0.2+ development headers (libssl-dev package)<br>JNI headers from Java compatible JDK 1.4+<br>GNU development environment (gcc, make)</p>
+</blockquote>
+</blockquote>
+<pre><code>yum install apr* openssl-devel gcc make
+
+tar zxvf apr-1.4.5.tar  
+cd apr-1.4.5  
+./configure --prefix=/usr/local/apr  
+make  
+make install  
+
+tar -zxvf apr-iconv-1.2.1.tar.gz  
+cd apr-iconv-1.2.1  
+./configure --prefix=/usr/local/apr-iconv --with-apr=/usr/local/apr  
+make  
+make install
+
+yum install expat-devel
+
+tar zxvf apr-util-1.3.12.tar.gz  
+cd apr-util-1.3.12  
+./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
+make  
+make install 
+
+安装openssl 1.0.2
+./config  --prefix=/usr/local/openssl
+修改Makefile：
+vi Makefile
+将原来的：CFLAG=     -DOPENSSL_THREADS
+修改为：  CFLAG= -fPIC -DOPENSSL_THREADS
+也就是添加-fPIC
+执行执行：
+make &amp;&amp; make install
+
+cd bin
+tar -zxvf tomcat-native.tar.gz
+cd tomcat-native-1.2.12-src
+cd native
+./configure --with-apr=/usr/local/apr --with-ssl=/usr/local/openssl 
+make
+make install
+
+catalina.sh：
+JAVA_OPTS=&quot;$JAVA_OPTS -Djava.library.path=/usr/local/apr/lib
+注意：开启了apr之后，jvm用到的native内存会增大，因此要适当调大Metaspace空间,添加JVM选项：-XX:MetaspaceSize=128m
+JAVA_OPTS=&quot;-server -Xms2048M -Xmx2048M -XX:MetaspaceSize=128M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$CATALINA_HOME/logs/heap.dump&quot;
+
+server.xml：
+&lt;Connector port=&quot;8080&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;
+connectionTimeout=&quot;20000&quot;
+redirectPort=&quot;8443&quot; /&gt;
+
+&lt;Listener className=&quot;org.apache.catalina.core.AprLifecycleListener&quot; SSLEngine=&quot;off&quot; /&gt;</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/code-criterion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="太阳战士">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余生的第一天">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/17/code-criterion/" itemprop="url">code-criterion</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T21:43:43+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><pre><code>老司机一般的规范大家都知道类似驼峰,匹配一类的大家都知道具体则不再提
+有问题或者宝贵意见联系我的QQ,非常希望你的加入！</code></pre><p>##要求：<br>1.lombook– idea插件请大家下载 ,去除setget构造方法等,阿里巴巴代码规范插件请自行下载<br><br>2.<strong>尽量将长的类名，方法名，变量名精简</strong><br></p>
+<pre><code>1.长的类名会使开发者不易生命该类型的变量
+2.长的方法命名会使它变得晦涩难懂
+3.长的变量名不利于代码重用，导致过长的方法链</code></pre><p>3.<strong>命名清晰准确</strong><br></p>
+<pre><code>清晰: 你要知道该命名于什么有关
+精确：你要知道该命名于什么无关
+当完成这两个目标后其他的都是多余的字符</code></pre><p>4.<strong>命名无需含有表示变量或者参数类型的单词</strong><br></p>
+<pre><code>nameString  请写成 name
+accountLessWindow 请写成 window</code></pre><p>5.<strong>对于集合来说，最好使用名词的复数形式来描述内容</strong><br></p>
+<pre><code>List&lt;DateTime&gt; holidayDateLists 请写成 List&lt;DateTime&gt; holidays
+Map&lt;Employee,Role&gt; employeeRoleHashMap 请写成 Map&lt;Employee,Role&gt; employeeRoles</code></pre><p>6.<strong>方法名不需要描述它的参数及参数的类型–参数列表已经说明了这些</strong><br></p>
+<pre><code>mergeTableCells(List&lt;TableCell&gt; cells) 请写成 merge(List&lt;TableCell&gt; cells)
+sortEventsUsingComparator(List&lt;Event&gt; events,Comparator&lt;Event&gt; comparator) 请写成 sort(List&lt;Event&gt; events, Comparator&lt;Event&gt; comparator)</code></pre><p>7.<strong>省略命名中不是用来消除歧义的单词</strong><br><br>8.<strong>命名只是一个表示符，只要告诉你变量在哪定义不需要吧所有的信息都塞到命名里面</strong><br></p>
+<pre><code>recentlyUpdatedAnnualSalesBid
+存在不是最近更新的全年销售投标么？
+存在没有被更新的最近的全年销售投标么？
+存在最近更新的非全年的销售投标么？
+存在最近更新的全年非销售的投标么？
+存在最近更新的全年销售非投标的东东吗？
+上面的任何一个问题回答是不存在，那就意味着命名中引入了无用的单词
+finalBattleMostDangerousBossMonster 请写成 boss
+weaklingFirstEncounterMonster 请写成firstMonster
+如果有一些你觉得过了，太短了，容易引起歧义，但是你可以大胆的这样做，如果在之后的开发中你觉得命名会造成冲突和不明确
+你可以填一些修饰词来完善它，反之如果一开始就是一个很长的名字，你不可能再改回来</code></pre><p>9.<strong>省略命名中可以从上下文获取的单词</strong><br></p>
+<pre><code>// Bad:
+class AnnualHolidaySale {
+  int _annualSaleRebate;
+  void promoteHolidaySale() { ... }
+}
+// Better:
+class AnnualHolidaySale {
+  int _rebate;
+  void promote() { ... }
+}
+实际上一个命名嵌套的层次越多，他就有更多的相关的上下文，也就更简短，换句话说一个变量的作用域越小，命名就越短</code></pre><p>10.<strong>省略命名中无任何意义的单词</strong><br></p>
+<pre><code>例如：data、state、amount、value、manager、engine、object、entity 和 instance一类的 不需要这类严肃的词语 </code></pre><p>11.<strong>是否可以描述出一幅画（我在装逼）</strong><br></p>
+<pre><code>一个好的命名能够在阅读者的脑海里面描绘出一幅图画，而降变量命名为manager 并不能象读者传达出任何有关该变量做什么的信息
+在命名时可以问一下自己，把这个单词去掉含义是不是不变？如果是，那就果断把它剔除吧</code></pre><p>12.<strong>终极一例</strong><br></p>
+<pre><code>例子:好吃的华夫饼
+
+      // 好吃的比利时华夫饼
+      class DeliciousBelgianWaffleObject {
+        void garnishDeliciousBelgianWaffleWithStrawberryList(
+            List&lt;Strawberry&gt; strawberryList) { ... }
+      }
+      首先，通过参数列表，我们可以知道方法是用来处理一个strawberry 的列表 所以可以在方法的命名中去掉
+      class DeliciousBelgianWaffleObject {
+          void garnishDeliciousBelgianWaffle(
+              List&lt;Strawberry&gt; strawberries) { ... }
+      }
+      除非程序中还包含不好吃的比利时华夫饼或者其它华夫饼 不然我们可以将这个无用的形容词去掉
+      class WaffleObject {
+        void garnishWaffle(List&lt;Strawberry&gt; strawberries) { ... }
+      }
+
+      方法是包含在waffleObject类中的 所以方法名无需waffle说明
+      class WaffleObject {
+        void garnish(List&lt;Strawberry&gt; strawberries) { ... }
+      }
+      很明显他是一个对象，任何事物都是一个对象，这也就是传说中的面相对象的意思，所以命名中无需带有Object
+      class Waffle {
+        void garnish(List&lt;Strawberry&gt; strawberries) { ... }
+      }</code></pre><p>13.<strong>类名应该是名词不应该是动词,使用普遍的被大众理解的词</strong><br><br>14.<strong>请勿抛异常直接返回</strong><br></p>
+<pre><code>类似如下规范
+Result result=Result.build();
+boolean isChecking = redisServiceUtil.getIsCheckingOfAutomatedLoanService();
+result.setValue(isChecking);
+if (isChecking) {
+    logger.info(&quot;--- isSystemChecking ---系统清算中-----&quot;);
+    result.withError(ResultMsgStatus.SYSTEM_CHECKING.getMessage());
+}
+return result;</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">太阳战士</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">太阳战士</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
